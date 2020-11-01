@@ -16,7 +16,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Content Include="template\**\*" Exclude="template\src\**\obj\**;template\src\**\bin\**" />
+        <Content Include="template\**\*" Exclude="template\**\obj\**\*;template\**\bin\**\*;template\**\.vs\**\*" />
         <Compile Remove="**\*" />
     </ItemGroup>
 

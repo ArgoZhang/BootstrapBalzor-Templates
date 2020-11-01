@@ -12,16 +12,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{6F4F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "template", "template", "{C290B017-2D47-460A-A489-228561E9A244}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootstrapBlazorServerPack", "BootstrapBlazorServerPack.csproj", "{C1618D9F-7129-4752-8D74-2F8A35A90749}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{7EBED753-EC7A-49C8-AA03-CB326AB108C9}"
-	ProjectSection(SolutionItems) = preProject
-		.template.config\template.json = .template.config\template.json
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootstrapBlazor.Server", "template\src\BootstrapBlazor.Server\BootstrapBlazor.Server.csproj", "{B60B1C5D-3937-4C1B-B4BE-26CEDEC72291}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootstrapBlazor.WebAssembly", "template\src\BootstrapBlazor.WebAssembly\BootstrapBlazor.WebAssembly.csproj", "{D0826256-0309-4EB5-ABC7-6ADA6F3B402F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{DACF47D7-B0A6-437E-A405-A442A1DA0C64}"
+	ProjectSection(SolutionItems) = preProject
+		template\.template.config\template.json = template\.template.config\template.json
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootstrapBlazorServerPack", "BootstrapBlazorServerPack.csproj", "{6693818B-6C4B-4852-BFDE-7514C57FE8DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C1618D9F-7129-4752-8D74-2F8A35A90749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1618D9F-7129-4752-8D74-2F8A35A90749}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1618D9F-7129-4752-8D74-2F8A35A90749}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1618D9F-7129-4752-8D74-2F8A35A90749}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B60B1C5D-3937-4C1B-B4BE-26CEDEC72291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B60B1C5D-3937-4C1B-B4BE-26CEDEC72291}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B60B1C5D-3937-4C1B-B4BE-26CEDEC72291}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,14 +37,18 @@ Global
 		{D0826256-0309-4EB5-ABC7-6ADA6F3B402F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0826256-0309-4EB5-ABC7-6ADA6F3B402F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0826256-0309-4EB5-ABC7-6ADA6F3B402F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6693818B-6C4B-4852-BFDE-7514C57FE8DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6693818B-6C4B-4852-BFDE-7514C57FE8DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6693818B-6C4B-4852-BFDE-7514C57FE8DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6693818B-6C4B-4852-BFDE-7514C57FE8DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C1618D9F-7129-4752-8D74-2F8A35A90749} = {C290B017-2D47-460A-A489-228561E9A244}
 		{B60B1C5D-3937-4C1B-B4BE-26CEDEC72291} = {40AADEE4-13B4-4508-A796-3B3D90770A4E}
 		{D0826256-0309-4EB5-ABC7-6ADA6F3B402F} = {40AADEE4-13B4-4508-A796-3B3D90770A4E}
+		{6693818B-6C4B-4852-BFDE-7514C57FE8DD} = {C290B017-2D47-460A-A489-228561E9A244}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E900480D-9593-4B99-8762-F3A48997A2C2}
