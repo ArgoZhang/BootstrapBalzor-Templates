@@ -4,7 +4,7 @@
   "classifications": [ "Common", "Web/Blazor", "C#" ],
   "identity": "BootstrapBlazor",
   "name": "Bootstrap Blazor App",
-  "shortName": "bbserver",
+  "shortName": "bbapp",
   "tags": {
     "language": "C#",
     "type": "project"
