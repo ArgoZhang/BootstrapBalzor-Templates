@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
-namespace BootstrapBlazor.WebAssembly
+namespace BootstrapBlazorApp.WebAssembly
 {
     /// <summary>
     /// 

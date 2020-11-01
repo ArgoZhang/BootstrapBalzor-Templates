@@ -2,11 +2,8 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BootstrapBlazor.WebAssembly.Data
+namespace BootstrapBlazorServerApp.Data
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public class WeatherForecastService
     {
         private static readonly string[] Summaries = new[]
@@ -14,11 +11,6 @@ namespace BootstrapBlazor.WebAssembly.Data
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="startDate"></param>
-        /// <returns></returns>
         public Task<WeatherForecast[]> GetForecastAsync(DateTime startDate)
         {
             var rng = new Random();

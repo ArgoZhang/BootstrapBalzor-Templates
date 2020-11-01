@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BootstrapBlazor.WebAssembly.Data
+namespace BootstrapBlazorApp.WebAssembly.Data
 {
     /// <summary>
     /// 

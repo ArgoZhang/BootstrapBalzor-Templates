@@ -1,5 +1,4 @@
-﻿using BootstrapBlazor.WebAssembly;
-using BootstrapBlazor.WebAssembly.Data;
+﻿using BootstrapBlazorApp.WebAssembly.Data;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.JSInterop;
@@ -8,7 +7,7 @@ using System.Globalization;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace BootstrapBlazor.WebAssembly
+namespace BootstrapBlazorApp.WebAssembly
 {
     /// <summary>
     /// 

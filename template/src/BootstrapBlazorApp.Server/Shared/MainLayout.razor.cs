@@ -1,7 +1,7 @@
 ﻿using BootstrapBlazor.Components;
 using System.Collections.Generic;
 
-namespace BootstrapBlazor.WebAssembly.Shared
+namespace BootstrapBlazorApp.Server.Shared
 {
     /// <summary>
     /// 
