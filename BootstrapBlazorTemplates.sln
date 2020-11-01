@@ -7,12 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootstrapBlazorServerPack",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{40AADEE4-13B4-4508-A796-3B3D90770A4E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootstrapBlazorServer", "templates\BootstrapBlazorServerPack\templates\BootstrapBlazorServer\BootstrapBlazorServer.csproj", "{7B9DCCAC-0138-4941-8D8F-453933A4D3A4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{6F4F3A0E-06A9-4A6E-BA84-ADD5D4E3ECAE}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\pack.yml = .github\workflows\pack.yml
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootstrapBlazor.Server", "templates\BootstrapBlazorServerPack\templates\BootstrapBlazor.Server\BootstrapBlazor.Server.csproj", "{C2E40E02-91C4-4279-A160-411855A04807}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,17 +24,17 @@ Global
 		{6F540041-CE28-47C7-A283-5A4580A33576}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F540041-CE28-47C7-A283-5A4580A33576}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F540041-CE28-47C7-A283-5A4580A33576}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B9DCCAC-0138-4941-8D8F-453933A4D3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B9DCCAC-0138-4941-8D8F-453933A4D3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B9DCCAC-0138-4941-8D8F-453933A4D3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B9DCCAC-0138-4941-8D8F-453933A4D3A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2E40E02-91C4-4279-A160-411855A04807}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E40E02-91C4-4279-A160-411855A04807}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E40E02-91C4-4279-A160-411855A04807}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E40E02-91C4-4279-A160-411855A04807}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6F540041-CE28-47C7-A283-5A4580A33576} = {40AADEE4-13B4-4508-A796-3B3D90770A4E}
-		{7B9DCCAC-0138-4941-8D8F-453933A4D3A4} = {40AADEE4-13B4-4508-A796-3B3D90770A4E}
+		{C2E40E02-91C4-4279-A160-411855A04807} = {40AADEE4-13B4-4508-A796-3B3D90770A4E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E900480D-9593-4B99-8762-F3A48997A2C2}

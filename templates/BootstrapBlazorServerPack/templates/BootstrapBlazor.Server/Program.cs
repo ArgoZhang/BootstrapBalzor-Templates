@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace BootstrapBlazorServer
+namespace BootstrapBlazor.Server
 {
     public class Program
     {
