@@ -9,6 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootstrapBlazorServer", "templates\BootstrapBlazorServerPack\templates\BootstrapBlazorServer\BootstrapBlazorServer.csproj", "{7B9DCCAC-0138-4941-8D8F-453933A4D3A4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{6F4F3A0E-06A9-4A6E-BA84-ADD5D4E3ECAE}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\pack.yml = .github\workflows\pack.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
