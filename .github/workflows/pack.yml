@@ -22,5 +22,5 @@ jobs:
       env: 
         NUGET_API_KEY: ${{secrets.NUGET_API_KEY}}
       run: |
-        dotnet pack templates/BootstrapBlazorServerPack -c Release -o publish
+        dotnet pack BootstrapBlazorServerPack.csproj -c Release -o publish
         dotnet nuget push publish/Bootstrap.Blazor.Templates.*.nupkg -s https://api.nuget.org/v3/index.json -k $NUGET_API_KEY --skip-duplicate
