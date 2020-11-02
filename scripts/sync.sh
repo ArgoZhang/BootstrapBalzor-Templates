@@ -1,4 +1,6 @@
 #!/bin/sh
+# Permission denied
+# chmod a+x sync.sh
 
 if [ $1 = "" ]; then
     echo Please provider SolutionDir like: "$(MSBuildThisFileDirectory)"
@@ -12,11 +14,12 @@ echo "Ready to copy files to dist"
 
 echo copy $sourceDir $targetDir 
 
-rm /fr %sourceDir%/.vs
-rm /fr %sourceDir%/BootstrapBlazorApp.Server/bin
-rm /fr %sourceDir%/BootstrapBlazorApp.Server/obj
-rm /fr %sourceDir%/BootstrapBlazorApp.WebAssembly/bin
-rm /fr %sourceDir%/BootstrapBlazorApp.WebAssembly/obj
+rm -rf $targetDir/src/BootstrapBlazorApp*
+rm -rf $sourceDir/.vs
+rm -rf $sourceDir/BootstrapBlazorApp.Server/bin
+rm -rf $sourceDir/BootstrapBlazorApp.Server/obj
+rm -rf $sourceDir/BootstrapBlazorApp.WebAssembly/bin
+rm -rf $sourceDir/BootstrapBlazorApp.WebAssembly/obj
 \cp -rf $sourceDir $targetDir
 
 echo Sync success!
