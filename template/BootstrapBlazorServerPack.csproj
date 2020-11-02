@@ -20,4 +20,19 @@
         <Compile Remove="**\*" />
     </ItemGroup>
 
+    <PropertyGroup Condition="'$(OS)' == 'Windows_NT'">
+        <ScriptFolder>$(MSBuildThisFileDirectory)..\scripts</ScriptFolder>
+        <SyncCmd>$(ScriptFolder)\sync.cmd</SyncCmd>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(OS)' == 'UNIX'">
+        <ScriptFolder>$(MSBuildThisFileDirectory)../scripts</ScriptFolder>
+        <SyncCmd>$(ScriptFolder)/sync.sh</SyncCmd>
+    </PropertyGroup>
+
+    <Target Name="PreBuild" AfterTargets="PreBuildEvent">
+        <Message Text="Run command: $(TargetDir)" Importance="high" />
+        <Exec Command="$(SyncCmd) $(MSBuildThisFileDirectory)" />
+    </Target>
+
 </Project>
