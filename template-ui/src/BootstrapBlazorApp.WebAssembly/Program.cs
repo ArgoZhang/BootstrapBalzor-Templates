@@ -1,9 +1,7 @@
 ﻿using BootstrapBlazorApp.WebAssembly.Data;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.JSInterop;
 using System;
-using System.Globalization;
 using System.Net.Http;
 using System.Threading.Tasks;
 
