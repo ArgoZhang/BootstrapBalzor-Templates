@@ -11,7 +11,9 @@ echo "Ready to copy files to dist
 
 echo xcopy %sourceDir%\*.* %targetDir% /y
 
-rd /Q /S %targetDir%\BootstrapBlazorApp*
+rd /Q /S %targetDir%\BootstrapBlazorApp.Server
+rd /Q /S %targetDir%\BootstrapBlazorApp.WebAssembly
+del %targetDir%\BootstrapBlazorApp.sln
 rd /Q /S %sourceDir%\.vs
 rd /Q /S %sourceDir%\BootstrapBlazorApp.Server\bin
 rd /Q /S %sourceDir%\BootstrapBlazorApp.Server\obj
