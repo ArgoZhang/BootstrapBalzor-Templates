@@ -6,7 +6,7 @@ if [ $1 = "" ]; then
 fi
 
 sourceDir=$1../template-ui/src
-targetDir=$1src
+targetDir=$1
 
 echo "Ready to copy files to dist"
 
