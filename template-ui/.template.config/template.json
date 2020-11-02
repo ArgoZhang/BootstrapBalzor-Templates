@@ -1,0 +1,41 @@
+{
+  "author": "Argo Zhang(argo@163.com)",
+  "classifications": [],
+  "description": "Project templates for creating Bootstrap Blazor apps that run on the server in an ASP.NET Core app or in the browser on WebAssembly (wasm). These templates can be used to build web apps rich dynamic user interface (UIs).",
+  "name": "Bootstrap Blazor Project (Server-Side, Wasm)",
+  "defaultName": "BootstrapBlazorApp",
+  "identity": "BootstrapBlazor.CSharp",
+  "groupIdentity": "BootstrapBlazorApp",
+  "tags": {
+    "language": "C#",
+    "type": "project",
+    "framework": "Blazor"
+  },
+  "shortName": "bbapp",
+  "sourceName": "BootstrapBlazorApp",
+  "guids": [],
+  "primaryOutputs": [
+    {
+      "path": "src\\BootstrapBlazorApp.Server\\BootstrapBlazorApp.Server.csproj"
+    },
+    {
+      "path": "src\\BootstrapBlazorApp.WebAssembly\\BootstrapBlazorApp.WebAssembly.csproj"
+    }
+  ],
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            "**/.git/**",
+            "**/.gitee/**",
+            "**/.github/**",
+            "**/.vs/**",
+            "**/*.nuspec",
+            "VsixPackager/**"
+          ]
+        }
+      ]
+    }
+  ]
+}
