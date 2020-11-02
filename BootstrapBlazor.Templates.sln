@@ -31,6 +31,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "windows", "windows", "{40A9706D-5CCA-4841-8B81-FB89023C961B}"
 	ProjectSection(SolutionItems) = preProject
 		scripts\sync.cmd = scripts\sync.cmd
+		sync.sh = sync.sh
 	EndProjectSection
 EndProject
 Global
