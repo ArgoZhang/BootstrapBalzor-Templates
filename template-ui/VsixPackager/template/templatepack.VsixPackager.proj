@@ -9,7 +9,7 @@
     <PropertyGroup Label="TemplatePackInfo">
         <Authors>Your name here</Authors>
         <Description>A description for your template pack</Description>
-        <Version>5.0.1</Version>
+        <Version>5.0.2</Version>
     </PropertyGroup>
 
     <PropertyGroup Label="PackageConfiguration">
