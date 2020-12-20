@@ -1,9 +1,10 @@
 ﻿@inherits LayoutComponentBase
 
 <Layout SideWidth="0" IsPage="true" IsFullSide="true" IsFixedHeader="true" IsFixedFooter="true"
-        ShowFooter="true" ShowGotoTop="true" ShowCollapseBar="true" Menus="@Menus">
+        ShowFooter="true" ShowGotoTop="true" ShowCollapseBar="true" Menus="@Menus" UseTabSet="@UseTabSet">
     <Header>
         <span class="ml-3 flex-fill">Bootstrap of Blazor</span>
+        <Switch @bind-Value="@UseTabSet" OnText="多标签" OffText="单页" OnColor="@Color.Danger" OffColor="@Color.Dark" style="width: 120px;"></Switch>
         <img src="images/Argo.png" class="layout-avatar-right" />
         <span class="ml-3 d-none d-sm-block">超级管理员</span>
     </Header>
