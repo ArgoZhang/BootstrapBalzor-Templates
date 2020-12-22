@@ -1,7 +1,7 @@
 ﻿@inherits LayoutComponentBase
 
 <Layout SideWidth="0" IsPage="true" IsFullSide="true" IsFixedHeader="true" IsFixedFooter="true"
-        ShowFooter="true" ShowGotoTop="true" ShowCollapseBar="true" Menus="@Menus" UseTabSet="@UseTabSet">
+        ShowFooter="true" ShowGotoTop="true" ShowCollapseBar="true" Menus="@Menus" UseTabSet="@UseTabSet" AdditionalAssemblies="new[] { GetType().Assembly }">
     <Header>
         <span class="ml-3 flex-fill">Bootstrap of Blazor</span>
         <Switch @bind-Value="@UseTabSet" OnText="多标签" OffText="单页" OnColor="@Color.Danger" OffColor="@Color.Dark" style="width: 120px;"></Switch>
