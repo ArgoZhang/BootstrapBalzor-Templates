@@ -20,6 +20,8 @@ rm -rf $sourceDir/BootstrapBlazorApp.Server/bin
 rm -rf $sourceDir/BootstrapBlazorApp.Server/obj
 rm -rf $sourceDir/BootstrapBlazorApp.WebAssembly/bin
 rm -rf $sourceDir/BootstrapBlazorApp.WebAssembly/obj
+rm -rf $sourceDir/BootstrapBlazorApp.Shared/bin
+rm -rf $sourceDir/BootstrapBlazorApp.Shared/obj
 \cp -rf $sourceDir $targetDir
 
 echo Sync success!
