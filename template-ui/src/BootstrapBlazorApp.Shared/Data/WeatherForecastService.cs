@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BootstrapBlazorApp.WebAssembly.Data
+namespace BootstrapBlazorApp.Shared.Data
 {
     /// <summary>
     /// 

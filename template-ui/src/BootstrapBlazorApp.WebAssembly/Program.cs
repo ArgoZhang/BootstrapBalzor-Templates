@@ -1,4 +1,4 @@
-﻿using BootstrapBlazorApp.WebAssembly.Data;
+﻿using BootstrapBlazorApp.Shared.Data;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System;

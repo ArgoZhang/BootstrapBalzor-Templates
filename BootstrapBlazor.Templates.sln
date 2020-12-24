@@ -34,6 +34,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "windows", "windows", "{40A9
 		sync.sh = sync.sh
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BootstrapBlazorApp.Shared", "template-ui\src\BootstrapBlazorApp.Shared\BootstrapBlazorApp.Shared.csproj", "{70EB0799-4CA6-4019-8F6E-FE97D082C135}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{B661BA90-BA20-4782-8EC1-5A4E8E2549EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B661BA90-BA20-4782-8EC1-5A4E8E2549EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B661BA90-BA20-4782-8EC1-5A4E8E2549EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70EB0799-4CA6-4019-8F6E-FE97D082C135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70EB0799-4CA6-4019-8F6E-FE97D082C135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70EB0799-4CA6-4019-8F6E-FE97D082C135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70EB0799-4CA6-4019-8F6E-FE97D082C135}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{814FD9DC-DA80-4C33-BEFF-CC81DBB6C767} = {40AADEE4-13B4-4508-A796-3B3D90770A4E}
 		{B661BA90-BA20-4782-8EC1-5A4E8E2549EC} = {40AADEE4-13B4-4508-A796-3B3D90770A4E}
 		{40A9706D-5CCA-4841-8B81-FB89023C961B} = {6F4F3A0E-06A9-4A6E-BA84-ADD5D4E3ECAE}
+		{70EB0799-4CA6-4019-8F6E-FE97D082C135} = {40AADEE4-13B4-4508-A796-3B3D90770A4E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E900480D-9593-4B99-8762-F3A48997A2C2}
