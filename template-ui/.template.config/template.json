@@ -20,6 +20,9 @@
     },
     {
       "path": "src\\BootstrapBlazorApp.WebAssembly\\BootstrapBlazorApp.WebAssembly.csproj"
+    },
+    {
+      "path": "src\\BootstrapBlazorApp.Shared\\BootstrapBlazorApp.Shared.csproj"
     }
   ],
   "sources": [
