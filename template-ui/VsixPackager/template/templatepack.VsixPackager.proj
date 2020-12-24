@@ -7,9 +7,9 @@
             Condition=" '$(TemplatePackPropsFilePath)' != '' and Exists('$(TemplatePackPropsFilePath)') " />
 
     <PropertyGroup Label="TemplatePackInfo">
-        <Authors>Your name here</Authors>
-        <Description>A description for your template pack</Description>
-        <Version>5.0.3</Version>
+        <Authors>Argo Zhang(argo@163.com)</Authors>
+        <Description>Project templates for creating Bootstrap Blazor apps that run on the server in an ASP.NET Core app or in the browser on WebAssembly (wasm). These templates can be used to build web apps rich dynamic user interface (UIs).</Description>
+        <Version>5.0.4</Version>
     </PropertyGroup>
 
     <PropertyGroup Label="PackageConfiguration">
