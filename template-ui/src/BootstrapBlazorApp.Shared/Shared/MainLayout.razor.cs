@@ -10,6 +10,8 @@ namespace BootstrapBlazorApp.Shared.Shared
     {
         private bool UseTabSet { get; set; } = true;
 
+        private string Theme { get; set; } = "";
+
         private bool IsOpen { get; set; }
 
         private bool IsFixedHeader { get; set; } = true;

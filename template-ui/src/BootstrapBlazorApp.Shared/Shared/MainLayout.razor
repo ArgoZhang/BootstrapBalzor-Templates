@@ -2,7 +2,7 @@
 
 <Layout SideWidth="0" IsPage="true" ShowGotoTop="true" ShowCollapseBar="true"
         IsFullSide="@IsFullSide" IsFixedHeader="@IsFixedHeader" IsFixedFooter="@IsFixedFooter" ShowFooter="@ShowFooter"
-        Menus="@Menus" UseTabSet="@UseTabSet" AdditionalAssemblies="new[] { GetType().Assembly }">
+        Menus="@Menus" UseTabSet="@UseTabSet" AdditionalAssemblies="new[] { GetType().Assembly }" class="@Theme">
     <Header>
         <span class="ml-3 flex-fill">Bootstrap of Blazor</span>
         <img src="_content/BootstrapBlazorApp.Shared/images/Argo.png" class="layout-avatar-right" />
@@ -104,22 +104,22 @@
             <p>主题配色</p>
             <div class="row">
                 <div class="col-2">
-                    <span class="color color1"></span>
+                    <span class="color color1" @onclick="@(e => Theme = "color1")"></span>
                 </div>
                 <div class="col-2">
-                    <span class="color color2"></span>
+                    <span class="color color2" @onclick="@(e => Theme = "color2")"></span>
                 </div>
                 <div class="col-2">
-                    <span class="color color3"></span>
+                    <span class="color color3" @onclick="@(e => Theme = "color3")"></span>
                 </div>
                 <div class="col-2">
-                    <span class="color color4"></span>
+                    <span class="color color4" @onclick="@(e => Theme = "color4")"></span>
                 </div>
                 <div class="col-2">
-                    <span class="color color5"></span>
+                    <span class="color color5" @onclick="@(e => Theme = "color5")"></span>
                 </div>
                 <div class="col-2">
-                    <span class="color color6"></span>
+                    <span class="color color6" @onclick="@(e => Theme = "color6")"></span>
                 </div>
             </div>
         </div>
