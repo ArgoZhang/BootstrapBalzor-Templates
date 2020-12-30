@@ -35,12 +35,17 @@ namespace BootstrapBlazorApp.Shared.Shared
             Menus = GetIconSideMenuItems();
         }
 
-        private List<MenuItem> GetIconSideMenuItems() => new List<MenuItem>
+        private static List<MenuItem> GetIconSideMenuItems()
         {
-            new MenuItem() { Text = "返回组件库", Icon = "fa fa-fw fa-home", Url = "https://www.blazor.zone/components" },
-            new MenuItem() { Text = "Index", Icon = "fa fa-fw fa-fa", Url = "" },
-            new MenuItem() { Text = "Counter", Icon = "fa fa-fw fa-check-square-o", Url = "counter" },
-            new MenuItem() { Text = "FetchData", Icon = "fa fa-fw fa-database", Url = "fetchdata" }
-        };
+            var menus = new List<MenuItem>
+            {
+                new MenuItem() { Text = "返回组件库", Icon = "fa fa-fw fa-home", Url = "https://www.blazor.zone/components" },
+                new MenuItem() { Text = "Index", Icon = "fa fa-fw fa-fa", Url = "" },
+                new MenuItem() { Text = "Counter", Icon = "fa fa-fw fa-check-square-o", Url = "counter" },
+                new MenuItem() { Text = "FetchData", Icon = "fa fa-fw fa-database", Url = "fetchdata" }
+            };
+
+            return menus;
+        }
     }
 }
