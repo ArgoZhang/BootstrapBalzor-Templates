@@ -111,6 +111,11 @@
         width: 100%;
     }
 
+.layout.is-page .layout-right,
+.layout.is-page .layout-main {
+    background-color: #fff;
+}
+
 .color {
     width: 1.5rem;
     height: 1.5rem;
