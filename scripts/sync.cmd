@@ -4,7 +4,7 @@ if "%1" == "" (
     exit /B
 )
 
-set sourceDir=%1..\src
+set sourceDir=%1..\template-ui
 set targetDir=%1src
 
 echo "Ready to copy files to dist
@@ -21,6 +21,15 @@ rd /Q /S %sourceDir%\BootstrapBlazorApp.WebAssembly\obj
 rd /Q /S %sourceDir%\BootstrapBlazorApp.Shared\bin
 rd /Q /S %sourceDir%\BootstrapBlazorApp.Shared\obj
 
-xcopy %sourceDir%\*.* %targetDir% /E /R /Y
+mkdir %targetDir%\BootstrapBlazorApp.Server
+xcopy %sourceDir%\BootstrapBlazorApp.Server %targetDir%\BootstrapBlazorApp.Server /S /R /Y
+
+mkdir %targetDir%\BootstrapBlazorApp.WebAssembly
+xcopy %sourceDir%\BootstrapBlazorApp.WebAssembly %targetDir%\BootstrapBlazorApp.WebAssembly /S /R /Y
+
+mkdir %targetDir%\BootstrapBlazorApp.Shared
+xcopy %sourceDir%\BootstrapBlazorApp.Shared %targetDir%\BootstrapBlazorApp.Shared /S /R /Y
+
+xcopy %sourceDir%\..\src\*.sln %targetDir% /Y
 
 echo Sync success!
