@@ -16,13 +16,13 @@
   "guids": [],
   "primaryOutputs": [
     {
-      "path": "src\\BootstrapBlazorApp.Server\\BootstrapBlazorApp.Server.csproj"
+      "path": "BootstrapBlazorApp.Server\\BootstrapBlazorApp.Server.csproj"
     },
     {
-      "path": "src\\BootstrapBlazorApp.WebAssembly\\BootstrapBlazorApp.WebAssembly.csproj"
+      "path": "BootstrapBlazorApp.WebAssembly\\BootstrapBlazorApp.WebAssembly.csproj"
     },
     {
-      "path": "src\\BootstrapBlazorApp.Shared\\BootstrapBlazorApp.Shared.csproj"
+      "path": "BootstrapBlazorApp.Shared\\BootstrapBlazorApp.Shared.csproj"
     }
   ],
   "sources": [

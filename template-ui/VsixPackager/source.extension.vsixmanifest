@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="BootstrapBlazorVsix.c821b4dc-2e1f-4784-98da-16692643a224" Version="5.0.10" Language="en-US" Publisher="Argo Zhang" />
+        <Identity Id="BootstrapBlazorVsix.c821b4dc-2e1f-4784-98da-16692643a224" Version="5.0.11" Language="en-US" Publisher="Argo Zhang" />
         <DisplayName>Bootstrap Blazor Project Template</DisplayName>
         <Description xml:space="preserve">Project templates for creating Bootstrap Blazor apps that run on the server in an ASP.NET Core app or in the browser on WebAssembly (wasm). These templates can be used to build web apps rich dynamic user interface (UIs).</Description>
         <License>LICENSE.txt</License>
