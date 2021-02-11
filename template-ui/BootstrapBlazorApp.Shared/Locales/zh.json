@@ -5,6 +5,8 @@
     "Address": "地址",
     "Count": "数量",
     "Complete": "是/否",
-    "Education": "学历"
+    "Education": "学历",
+    "Name.Required": "{0}不能为空",
+    "Address.Required": "{0}不能为空"
   }
 }
