@@ -127,21 +127,21 @@ namespace BootstrapBlazorApp.Shared.Pages
             ///
             /// </summary>
             [Display(Name = "主键")]
-            [AutoGenerateColumn(Ignore = true, Searchable = false, Editable = false)]
+            [AutoGenerateColumn(Ignore = true)]
             public int Id { get; set; }
 
             /// <summary>
             ///
             /// </summary>
             [Required(ErrorMessage = "{0}不能为空")]
-            [AutoGenerateColumn(Order = 10, Sortable = true, Filterable = true)]
+            [AutoGenerateColumn(Order = 10, Sortable = true, Filterable = true, Searchable = true)]
             [Display(Name = "姓名")]
             public string Name { get; set; }
 
             /// <summary>
             ///
             /// </summary>
-            [AutoGenerateColumn(Order = 1, FormatString = "yyyy-MM-dd", Width = 180, Sortable = true, Filterable = true)]
+            [AutoGenerateColumn(Order = 1, FormatString = "yyyy-MM-dd", Width = 180, Sortable = true, Filterable = true, Searchable = true)]
             [Display(Name = "日期")]
             public DateTime? DateTime { get; set; }
 
@@ -150,21 +150,21 @@ namespace BootstrapBlazorApp.Shared.Pages
             /// </summary>
             [Display(Name = "地址")]
             [Required(ErrorMessage = "{0}不能为空")]
-            [AutoGenerateColumn(Order = 20, Sortable = true, Filterable = true)]
+            [AutoGenerateColumn(Order = 20, Sortable = true, Filterable = true, Searchable = true)]
             public string Address { get; set; }
 
             /// <summary>
             ///
             /// </summary>
             [Display(Name = "数量")]
-            [AutoGenerateColumn(Order = 40, Sortable = true, Filterable = true)]
+            [AutoGenerateColumn(Order = 40, Sortable = true, Filterable = true, Searchable = true)]
             public int Count { get; set; }
 
             /// <summary>
             ///
             /// </summary>
             [Display(Name = "是/否")]
-            [AutoGenerateColumn(Order = 50, Sortable = true, Filterable = true, Searchable = false)]
+            [AutoGenerateColumn(Order = 50, Sortable = true, Filterable = true)]
             public bool Complete { get; set; }
         }
     }
