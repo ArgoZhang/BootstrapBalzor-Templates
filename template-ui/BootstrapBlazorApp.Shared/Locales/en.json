@@ -1,0 +1,10 @@
+﻿{
+  "BootstrapBlazorApp.Shared.Pages.TableDemo.BindItem": {
+    "Name": "Name",
+    "DateTime": "DateTime",
+    "Address": "Address",
+    "Count": "Count",
+    "Complete": "Complete",
+    "Education": "Education"
+  }
+}

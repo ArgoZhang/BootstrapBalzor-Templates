@@ -1,0 +1,10 @@
+﻿{
+  "BootstrapBlazorApp.Shared.Pages.TableDemo.BindItem": {
+    "Name": "姓名",
+    "DateTime": "日期",
+    "Address": "地址",
+    "Count": "数量",
+    "Complete": "是/否",
+    "Education": "学历"
+  }
+}
