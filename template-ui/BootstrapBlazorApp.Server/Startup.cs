@@ -1,9 +1,11 @@
-﻿using BootstrapBlazorApp.Shared.Data;
+﻿using BootstrapBlazor.Components;
+using BootstrapBlazorApp.Shared.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 
 namespace BootstrapBlazorApp.Server
 {
@@ -23,7 +25,18 @@ namespace BootstrapBlazorApp.Server
             services.AddRazorPages();
             services.AddServerSideBlazor();
 
-            services.AddBootstrapBlazor();
+            services.AddBootstrapBlazor(setupAction: options =>
+            {
+                options.AdditionalJsonAssemblies = new[] { GetType().Assembly };
+            });
+
+            services.AddRequestLocalization<IOptions<BootstrapBlazorOptions>>((localizerOption, blazorOption) =>
+            {
+                var supportedCultures = blazorOption.Value.GetSupportedCultures();
+
+                localizerOption.SupportedCultures = supportedCultures;
+                localizerOption.SupportedUICultures = supportedCultures;
+            });
 
             services.AddSingleton<WeatherForecastService>();
         }
@@ -39,6 +52,8 @@ namespace BootstrapBlazorApp.Server
             {
                 app.UseExceptionHandler("/Error");
             }
+
+            app.UseRequestLocalization(app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>().Value);
 
             app.UseStaticFiles();
 
