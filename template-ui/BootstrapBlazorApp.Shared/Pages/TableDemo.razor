@@ -1,0 +1,16 @@
+﻿@page "/table"
+
+<h1>Table</h1>
+
+<Table TItem="BindItem" Items="@Items" IsPagination="true" PageItemsSource="@PageItemsSource"
+       IsStriped="true" IsBordered="true" ShowSkeleton="true" AutoGenerateColumns="true"
+       ShowToolbar="true" ShowSearch="true" ShowColumnList="true" IsMultipleSelect="true" ShowExtendButtons="true"
+       OnQueryAsync="@OnQueryAsync" OnDeleteAsync="@OnDeleteAsync" OnSaveAsync="@OnSaveAsync">
+    <TableColumns>
+        <TableColumn @bind-Field="@context.Complete">
+            <Template Context="v">
+                <Switch IsDisabled="true" Value="v.Value" ShowInnerText="true" OnInnerText="是" OffInnerText="否" />
+            </Template>
+        </TableColumn>
+    </TableColumns>
+</Table>
