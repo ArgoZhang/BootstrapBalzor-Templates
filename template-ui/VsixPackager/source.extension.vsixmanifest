@@ -5,6 +5,8 @@
         <DisplayName>Bootstrap Blazor Project Template</DisplayName>
         <Description xml:space="preserve">Project templates for creating Bootstrap Blazor apps that run on the server in an ASP.NET Core app or in the browser on WebAssembly (wasm). These templates can be used to build web apps rich dynamic user interface (UIs).</Description>
         <License>LICENSE.txt</License>
+        <Icon>Resources\Blazor128.png</Icon>
+        <PreviewImage>Resources\Blazor128.png</PreviewImage>
         <Tags>blazor; razor; template; C#; C sharp;</Tags>
     </Metadata>
     <Installation>
