@@ -59,7 +59,7 @@ namespace BootstrapBlazorApp.Shared.Pages
             var isSorted = false;
             if (!string.IsNullOrEmpty(options.SortName))
             {
-                var invoker = items.GetSortLambda().Compile();
+                var invoker = LambdaExtensions.GetSortLambda<BindItem>().Compile();
                 items = invoker(items, options.SortName, options.SortOrder).ToList();
 
                 // 通知内部已经过滤数据了
@@ -67,7 +67,7 @@ namespace BootstrapBlazorApp.Shared.Pages
             }
 
             // 设置记录总数
-            var total = items.Count();
+            var total = items.Count;
 
             // 内存分页
             items = items.Skip((options.PageIndex - 1) * options.PageItems).Take(options.PageItems).ToList();
