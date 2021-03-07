@@ -1,19 +1,40 @@
-﻿# To learn more about .editorconfig see https://aka.ms/editorconfigdocs
+# To learn more about .editorconfig see https://aka.ms/editorconfigdocs
 ############################### 
 # Core EditorConfig Options   # 
 ############################### 
-root=true
+root = true
+
 # All files 
 [*] 
-indent_style = space 
+indent_style = space
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
 # Code files 
 [*.{cs,csx,vb,vbx}] 
-indent_size = 4 
-insert_final_newline = true 
-trim_trailing_whitespace = true
-charset = utf-8-bom 
-[*.{json,yml,xml}]
+indent_size = 4
+
+[*.{cs,css,js,json,*html,razor,txt,log}]
+charset = utf-8-bom
+
+[*.{xml,config,*proj,nuspec,props,resx,targets,yml,tasks}]
 indent_size = 2
+
+# Xml config files
+[*.{props,targets,ruleset,config,nuspec,resx,vsixmanifest,vsct}]
+indent_size = 2
+
+[*.json]
+indent_size = 2
+
+[*.{ps1,psm1}]
+indent_size = 4
+
+[*.sh]
+indent_size = 4
+end_of_line = lf
+
 ############################### 
 # .NET Coding Conventions     # 
 ############################### 
