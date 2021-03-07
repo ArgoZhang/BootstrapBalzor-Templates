@@ -2,7 +2,7 @@
 
 <h1>Table</h1>
 
-<Table TItem="BindItem" Items="@Items" IsPagination="true" PageItemsSource="@PageItemsSource"
+<Table TItem="Foo" Items="@Items" IsPagination="true" PageItemsSource="@PageItemsSource"
        IsStriped="true" IsBordered="true" ShowSkeleton="true" AutoGenerateColumns="true"
        ShowToolbar="true" ShowSearch="true" IsMultipleSelect="true" ShowExtendButtons="true"
        OnQueryAsync="@OnQueryAsync" OnDeleteAsync="@OnDeleteAsync" OnSaveAsync="@OnSaveAsync">
@@ -12,5 +12,6 @@
                 <Switch IsDisabled="true" Value="v.Value" ShowInnerText="true" OnInnerText="是" OffInnerText="否" />
             </Template>
         </TableColumn>
+        <TableColumn @bind-Field="@context.Hobby" Data="@Hobbys" />
     </TableColumns>
 </Table>

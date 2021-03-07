@@ -1,8 +1,8 @@
 ﻿using BootstrapBlazor.Components;
 using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,10 +13,10 @@ namespace BootstrapBlazorApp.Shared.Pages
     /// </summary>
     public partial class TableDemo : ComponentBase
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        private static readonly Random random = new Random();
+        [Inject]
+        private IStringLocalizer<Foo> Localizer { get; set; }
+
+        private IEnumerable<SelectedItem> Hobbys { get; set; }
 
         /// <summary>
         /// 
@@ -25,7 +25,8 @@ namespace BootstrapBlazorApp.Shared.Pages
         {
             base.OnInitialized();
 
-            Items = GenerateItems();
+            Items = Foo.GenerateFoo(Localizer);
+            Hobbys = Foo.GenerateHobbys(Localizer);
         }
 
         /// <summary>
@@ -33,7 +34,7 @@ namespace BootstrapBlazorApp.Shared.Pages
         /// </summary>
         /// <param name="options"></param>
         /// <returns></returns>
-        private Task<QueryData<BindItem>> OnQueryAsync(QueryPageOptions options)
+        private Task<QueryData<Foo>> OnQueryAsync(QueryPageOptions options)
         {
             var items = Items;
 
@@ -41,7 +42,7 @@ namespace BootstrapBlazorApp.Shared.Pages
             if (options.Searchs.Any())
             {
                 // 针对 SearchText 进行模糊查询
-                items = items.Where(options.Searchs.GetFilterFunc<BindItem>(FilterLogic.Or)).ToList();
+                items = items.Where(options.Searchs.GetFilterFunc<Foo>(FilterLogic.Or)).ToList();
                 isSearched = true;
             }
 
@@ -49,7 +50,7 @@ namespace BootstrapBlazorApp.Shared.Pages
             var isFiltered = false;
             if (options.Filters.Any())
             {
-                items = items.Where(options.Filters.GetFilterFunc<BindItem>()).ToList();
+                items = items.Where(options.Filters.GetFilterFunc<Foo>()).ToList();
 
                 // 通知内部已经过滤数据了
                 isFiltered = true;
@@ -59,7 +60,7 @@ namespace BootstrapBlazorApp.Shared.Pages
             var isSorted = false;
             if (!string.IsNullOrEmpty(options.SortName))
             {
-                var invoker = LambdaExtensions.GetSortLambda<BindItem>().Compile();
+                var invoker = LambdaExtensions.GetSortLambda<Foo>().Compile();
                 items = invoker(items, options.SortName, options.SortOrder).ToList();
 
                 // 通知内部已经过滤数据了
@@ -72,7 +73,7 @@ namespace BootstrapBlazorApp.Shared.Pages
             // 内存分页
             items = items.Skip((options.PageIndex - 1) * options.PageItems).Take(options.PageItems).ToList();
 
-            return Task.FromResult(new QueryData<BindItem>()
+            return Task.FromResult(new QueryData<Foo>()
             {
                 Items = items,
                 TotalCount = total,
@@ -82,13 +83,13 @@ namespace BootstrapBlazorApp.Shared.Pages
             });
         }
 
-        private Task<bool> OnDeleteAsync(IEnumerable<BindItem> items)
+        private Task<bool> OnDeleteAsync(IEnumerable<Foo> items)
         {
             Items.RemoveAll(item => items.Contains(item));
             return Task.FromResult(true);
         }
 
-        private Task<bool> OnSaveAsync(BindItem item)
+        private Task<bool> OnSaveAsync(Foo item)
         {
             Items.Add(item);
             return Task.FromResult(true);
@@ -97,75 +98,11 @@ namespace BootstrapBlazorApp.Shared.Pages
         /// <summary>
         /// 
         /// </summary>
-        /// <returns></returns>
-        private static List<BindItem> GenerateItems() => Enumerable.Range(1, 80).Select(i => new BindItem()
-        {
-            Id = i,
-            Name = $"张三 {i:d4}",
-            DateTime = DateTime.Now.AddDays(i - 1),
-            Address = $"上海市普陀区金沙江路 {random.Next(1000, 2000)} 弄",
-            Count = random.Next(1, 100),
-            Complete = random.Next(1, 100) > 50
-        }).ToList();
+        private List<Foo> Items { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        private List<BindItem> Items { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private IEnumerable<int> PageItemsSource => new int[] { 4, 10, 20 };
-
-        /// <summary>
-        ///
-        /// </summary>
-        public class BindItem
-        {
-            /// <summary>
-            ///
-            /// </summary>
-            [Display(Name = "主键")]
-            [AutoGenerateColumn(Ignore = true)]
-            public int Id { get; set; }
-
-            /// <summary>
-            ///
-            /// </summary>
-            [Required(ErrorMessage = "{0}不能为空")]
-            [AutoGenerateColumn(Order = 10, Sortable = true, Filterable = true, Searchable = true)]
-            [Display(Name = "姓名")]
-            public string Name { get; set; }
-
-            /// <summary>
-            ///
-            /// </summary>
-            [AutoGenerateColumn(Order = 1, FormatString = "yyyy-MM-dd", Width = 180, Sortable = true, Filterable = true, Searchable = true)]
-            [Display(Name = "日期")]
-            public DateTime? DateTime { get; set; }
-
-            /// <summary>
-            ///
-            /// </summary>
-            [Display(Name = "地址")]
-            [Required(ErrorMessage = "{0}不能为空")]
-            [AutoGenerateColumn(Order = 20, Sortable = true, Filterable = true, Searchable = true)]
-            public string Address { get; set; }
-
-            /// <summary>
-            ///
-            /// </summary>
-            [Display(Name = "数量")]
-            [AutoGenerateColumn(Order = 40, Sortable = true, Filterable = true, Searchable = true)]
-            public int Count { get; set; }
-
-            /// <summary>
-            ///
-            /// </summary>
-            [Display(Name = "是/否")]
-            [AutoGenerateColumn(Order = 50, Sortable = true, Filterable = true)]
-            public bool Complete { get; set; }
-        }
+        private static IEnumerable<int> PageItemsSource => new int[] { 4, 10, 20 };
     }
 }
