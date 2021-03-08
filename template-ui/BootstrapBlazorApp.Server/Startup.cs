@@ -39,6 +39,9 @@ namespace BootstrapBlazorApp.Server
             });
 
             services.AddSingleton<WeatherForecastService>();
+
+            // 增加 Table 数据服务操作类
+            services.AddTableDemoDataService();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -2,10 +2,10 @@
 
 <h1>Table</h1>
 
-<Table TItem="Foo" Items="@Items" IsPagination="true" PageItemsSource="@PageItemsSource"
-       IsStriped="true" IsBordered="true" ShowSkeleton="true" AutoGenerateColumns="true"
-       ShowToolbar="true" ShowSearch="true" IsMultipleSelect="true" ShowExtendButtons="true"
-       OnQueryAsync="@OnQueryAsync" OnDeleteAsync="@OnDeleteAsync" OnSaveAsync="@OnSaveAsync">
+<Table TItem="Foo" IsPagination="true" PageItemsSource="@PageItemsSource"
+       IsStriped="true" IsBordered="true" ShowSkeleton="true" IsMultipleSelect="true"
+       ShowToolbar="true" ShowSearch="true" ShowExtendButtons="true"
+       UseInjectDataService="true" AutoGenerateColumns="true">
     <TableColumns>
         <TableColumn @bind-Field="@context.Complete">
             <Template Context="v">

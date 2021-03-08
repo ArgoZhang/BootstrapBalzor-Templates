@@ -30,6 +30,9 @@ namespace BootstrapBlazorApp.WebAssembly
 
             builder.Services.AddSingleton<WeatherForecastService>();
 
+            // 增加 Table 数据服务操作类
+            builder.Services.AddTableDemoDataService();
+
             var host = builder.Build();
 
             await host.RunAsync();
