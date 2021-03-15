@@ -1,38 +1,39 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
-        <PackageType>Template</PackageType>
-        <PackageVersion>1.0.18</PackageVersion>
-        <PackageId>Bootstrap.Blazor.Templates</PackageId>
-        <Title>Bootstrap Blazor Templates</Title>
-        <Authors>Argo Zhang(argo@163.com)</Authors>
-        <Description>Templates to use when creating an application for Bootstrap Blazor Server App</Description>
-        <PackageTags>dotnet-new;templates;bootstrapblazor</PackageTags>
-        <IncludeContentInPack>true</IncludeContentInPack>
-        <IncludeBuildOutput>false</IncludeBuildOutput>
-        <ContentTargetFolders>content</ContentTargetFolders>
-        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.0.19</PackageVersion>
+    <PackageId>Bootstrap.Blazor.Templates</PackageId>
+    <Title>Bootstrap Blazor Templates</Title>
+    <Authors>Argo Zhang(argo@163.com)</Authors>
+    <Description>Templates to use when creating an application for Bootstrap Blazor Server App</Description>
+    <PackageTags>dotnet-new;templates;bootstrapblazor</PackageTags>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <Content Include="src\**\*" Exclude="src\**\obj\**\*;src\**\bin\**\*;src\**\.vs\**\*" />
-        <Compile Remove="**\*" />
-    </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\**\*" Exclude="src\**\obj\**\*;src\**\bin\**\*;src\**\.vs\**\*" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
 
-    <PropertyGroup Condition="'$(OS)' == 'Windows_NT'">
-        <ScriptFolder>$(MSBuildThisFileDirectory)..\scripts</ScriptFolder>
-        <SyncCmd>$(ScriptFolder)\sync.cmd</SyncCmd>
-    </PropertyGroup>
+  <PropertyGroup Condition="'$(OS)' == 'Windows_NT'">
+    <ScriptFolder>$(MSBuildThisFileDirectory)..\scripts</ScriptFolder>
+    <SyncCmd>$(ScriptFolder)\sync.cmd</SyncCmd>
+  </PropertyGroup>
 
-    <PropertyGroup Condition="'$(OS)' == 'UNIX'">
-        <ScriptFolder>$(MSBuildThisFileDirectory)../scripts</ScriptFolder>
-        <SyncCmd>$(ScriptFolder)/sync.sh</SyncCmd>
-    </PropertyGroup>
+  <PropertyGroup Condition="'$(OS)' == 'UNIX'">
+    <ScriptFolder>$(MSBuildThisFileDirectory)../scripts</ScriptFolder>
+    <SyncCmd>$(ScriptFolder)/sync.sh</SyncCmd>
+  </PropertyGroup>
 
-    <Target Name="PreBuild" AfterTargets="PreBuildEvent">
-        <Message Text="Run command: $(MSBuildThisFileDirectory)" Importance="high" />
-        <Exec Command="$(SyncCmd) $(MSBuildThisFileDirectory)" />
-    </Target>
+  <Target Name="PreBuild" AfterTargets="PreBuildEvent">
+    <Message Text="Run command: $(MSBuildThisFileDirectory)" Importance="high" />
+    <Exec Command="$(SyncCmd) $(MSBuildThisFileDirectory)" />
+  </Target>
 
 </Project>
