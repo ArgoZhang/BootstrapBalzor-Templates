@@ -23,7 +23,7 @@ namespace BootstrapBlazorApp.Shared.Data
         /// <returns></returns>
         public static IServiceCollection AddTableDemoDataService(this IServiceCollection services)
         {
-            services.TryAddSingleton(typeof(IDataService<>), typeof(TableDemoDataService<>));
+            services.AddScoped(typeof(IDataService<>), typeof(TableDemoDataService<>));
             return services;
         }
     }
@@ -51,19 +51,20 @@ namespace BootstrapBlazorApp.Shared.Data
         /// <returns></returns>
         public override Task<QueryData<TModel>> QueryAsync(QueryPageOptions options)
         {
-            // 此处代码实战中不可用，仅仅为演示而写
+            // 此处代码实战中不可用，仅仅为演示而写防止数据全部被删除
             if (Items == null || Items.Count == 0)
             {
                 Items = Foo.GenerateFoo(Localizer).Cast<TModel>().ToList();
             }
 
             var items = Items.AsEnumerable();
-
+            var isSearched = false;
             // 处理高级查询
             if (options.SearchModel is Foo model)
             {
                 if (!string.IsNullOrEmpty(model.Name)) items = items.Cast<Foo>().Where(item => item.Name?.Contains(model.Name, StringComparison.OrdinalIgnoreCase) ?? false).Cast<TModel>();
                 if (!string.IsNullOrEmpty(model.Address)) items = items.Cast<Foo>().Where(item => item.Address?.Contains(model.Address, StringComparison.OrdinalIgnoreCase) ?? false).Cast<TModel>();
+                isSearched = !string.IsNullOrEmpty(model.Name) || !string.IsNullOrEmpty(model.Address);
             }
 
             if (options.Searchs.Any())
@@ -97,7 +98,8 @@ namespace BootstrapBlazorApp.Shared.Data
                 Items = items.Skip((options.PageIndex - 1) * options.PageItems).Take(options.PageItems).ToList(),
                 TotalCount = total,
                 IsFiltered = isFiltered,
-                IsSorted = isSorted
+                IsSorted = isSorted,
+                IsSearch = isSearched
             });
         }
 

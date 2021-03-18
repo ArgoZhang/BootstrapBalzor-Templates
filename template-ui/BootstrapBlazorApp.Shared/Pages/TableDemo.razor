@@ -9,8 +9,13 @@
     <TableColumns>
         <TableColumn @bind-Field="@context.Complete">
             <Template Context="v">
-                <Switch IsDisabled="true" Value="v.Value" ShowInnerText="true" OnInnerText="是" OffInnerText="否" />
+                <Switch IsDisabled="true" Value="v.Value" ShowInnerText="true" />
             </Template>
+            <EditTemplate Context="v">
+                <div class="form-group col-12 col-sm-6">
+                    <Switch @bind-Value="(v as Foo).Complete" ShowInnerText="true" />
+                </div>
+            </EditTemplate>
         </TableColumn>
         <TableColumn @bind-Field="@context.Hobby" Data="@Hobbys" />
     </TableColumns>
