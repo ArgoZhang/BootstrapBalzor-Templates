@@ -8,7 +8,7 @@
                     window.clearTimeout(handler);
                     $loader.remove();
                     $('body').removeClass('overflow-hidden');
-                }, 600);
+                }, 300);
             }
         },
     });

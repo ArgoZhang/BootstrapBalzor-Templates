@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace BootstrapBlazorApp.Shared.Pages
 {
@@ -18,9 +19,9 @@ namespace BootstrapBlazorApp.Shared.Pages
         /// <summary>
         /// 
         /// </summary>
-        protected override void OnInitialized()
+        protected override async Task OnInitializedAsync()
         {
-            base.OnInitialized();
+            await base.OnInitializedAsync();
 
             Hobbys = Foo.GenerateHobbys(Localizer);
         }

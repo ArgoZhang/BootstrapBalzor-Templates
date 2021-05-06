@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BootstrapBlazor" Version="5.0.27" />
+    <PackageReference Include="BootstrapBlazor" Version="5.0.29" />
   </ItemGroup>
 
   <ItemGroup>

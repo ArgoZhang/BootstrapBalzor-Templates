@@ -1,5 +1,7 @@
 ﻿using BootstrapBlazor.Components;
+using Microsoft.AspNetCore.Components.Routing;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace BootstrapBlazorApp.Shared.Shared
 {
@@ -24,14 +26,23 @@ namespace BootstrapBlazorApp.Shared.Shared
 
         private List<MenuItem> Menus { get; set; }
 
+        private Dictionary<string, string> TabItemTextDictionary { get; set; }
+
         /// <summary>
         /// OnInitialized 方法
         /// </summary>
-        protected override void OnInitialized()
+        protected override async Task OnInitializedAsync()
         {
-            base.OnInitialized();
+            await base.OnInitializedAsync();
 
-            // TODO: 菜单获取可以通过数据库获取，此处为示例直接拼装的菜单集合
+            // 模拟异步线程切换，正式代码中删除此行代码
+            await Task.Yield();
+
+            // 菜单获取可以通过数据库获取，此处为示例直接拼装的菜单集合
+            TabItemTextDictionary = new()
+            {
+                [""] = "Index"
+            };
             Menus = GetIconSideMenuItems();
         }
 
@@ -40,8 +51,8 @@ namespace BootstrapBlazorApp.Shared.Shared
             var menus = new List<MenuItem>
             {
                 new MenuItem() { Text = "返回组件库", Icon = "fa fa-fw fa-home", Url = "https://www.blazor.zone/components" },
-                new MenuItem() { Text = "Index", Icon = "fa fa-fw fa-fa", Url = "" },
-                new MenuItem() { Text = "Counter", Icon = "fa fa-fw fa-check-square-o", Url = "counter" },
+                new MenuItem() { Text = "Index", Icon = "fa fa-fw fa-fa", Url = "/" , Match = NavLinkMatch.All},
+                new MenuItem() { Text = "Counter", Icon = "fa fa-fw fa-check-square-o", Url = "/counter" },
                 new MenuItem() { Text = "FetchData", Icon = "fa fa-fw fa-database", Url = "fetchdata" },
                 new MenuItem() { Text = "Table", Icon = "fa fa-fw fa-table", Url = "table" }
             };
