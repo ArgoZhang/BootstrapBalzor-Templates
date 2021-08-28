@@ -25,7 +25,7 @@ namespace BootstrapBlazorApp.Server
             services.AddRazorPages();
             services.AddServerSideBlazor();
 
-            services.AddBootstrapBlazor(setupAction: options =>
+            services.AddBootstrapBlazor(localizationAction: options =>
             {
                 options.AdditionalJsonAssemblies = new[] { GetType().Assembly };
             });
