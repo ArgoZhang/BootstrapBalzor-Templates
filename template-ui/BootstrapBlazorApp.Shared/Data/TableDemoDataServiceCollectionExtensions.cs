@@ -108,24 +108,19 @@ namespace BootstrapBlazorApp.Shared.Data
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        public override Task<bool> SaveAsync(TModel model)
+        public override Task<bool> SaveAsync(TModel model, ItemChangedType changedType)
         {
             var ret = false;
             if (model is Foo foo)
             {
-                var item = Items?.FirstOrDefault(item =>
+                if (changedType == ItemChangedType.Add)
                 {
-                    var f = item as Foo;
-                    return f.Id == foo.Id;
-                });
-                if (item == null)
-                {
-                    var id = Items!.Count + 1;
+                    var id = Items.Count + 1;
                     while (Items.FirstOrDefault(item => (item as Foo)!.Id == id) != null)
                     {
                         id++;
                     }
-                    item = new Foo()
+                    var item = new Foo()
                     {
                         Id = id,
                         Name = foo.Name,
@@ -136,11 +131,11 @@ namespace BootstrapBlazorApp.Shared.Data
                         Education = foo.Education,
                         Hobby = foo.Hobby
                     } as TModel;
-                    Items?.Add(item!);
+                    Items?.Add(item);
                 }
                 else
                 {
-                    var f = item as Foo;
+                    var f = Items.First(i => (i as Foo)!.Id == foo.Id) as Foo;
                     f.Name = foo.Name;
                     f.Address = foo.Address;
                     f.Complete = foo.Complete;
