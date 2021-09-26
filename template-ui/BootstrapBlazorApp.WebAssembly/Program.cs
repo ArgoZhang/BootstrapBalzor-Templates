@@ -27,7 +27,11 @@ namespace BootstrapBlazorApp.WebAssembly
             builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             // 增加 BootstrapBlazor 组件
-            builder.Services.AddBootstrapBlazor();
+            builder.Services.AddBootstrapBlazor(op =>
+            {
+                // 设置组件默认使用中文
+                op.DefaultCultureInfo = "zh";
+            });
 
             builder.Services.AddSingleton<WeatherForecastService>();
 
