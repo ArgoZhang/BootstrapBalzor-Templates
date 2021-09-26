@@ -29,6 +29,6 @@ namespace BootstrapBlazorApp.Shared.Pages
         /// <summary>
         /// 
         /// </summary>
-        private static IEnumerable<int> PageItemsSource => new int[] { 4, 10, 20 };
+        private IEnumerable<int> PageItemsSource => new int[] { 4, 10, 20 };
     }
 }

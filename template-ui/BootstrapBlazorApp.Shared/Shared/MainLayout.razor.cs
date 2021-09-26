@@ -54,7 +54,8 @@ namespace BootstrapBlazorApp.Shared.Shared
                 new MenuItem() { Text = "Index", Icon = "fa fa-fw fa-fa", Url = "/" , Match = NavLinkMatch.All},
                 new MenuItem() { Text = "Counter", Icon = "fa fa-fw fa-check-square-o", Url = "/counter" },
                 new MenuItem() { Text = "FetchData", Icon = "fa fa-fw fa-database", Url = "fetchdata" },
-                new MenuItem() { Text = "Table", Icon = "fa fa-fw fa-table", Url = "table" }
+                new MenuItem() { Text = "Table", Icon = "fa fa-fw fa-table", Url = "table" },
+                new MenuItem() { Text = "花名册", Icon = "fa fa-fw fa-users", Url = "users" }
             };
 
             return menus;
