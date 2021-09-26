@@ -42,3 +42,11 @@
     background: #e9ecef;
     color: #3f4254;
 }
+
+.tabs-border-card > .tabs-header {
+    background-color: #fff;
+}
+
+    .tabs-border-card > .tabs-header .tabs-item.active {
+        background-color: #f5f8fa;
+    }
