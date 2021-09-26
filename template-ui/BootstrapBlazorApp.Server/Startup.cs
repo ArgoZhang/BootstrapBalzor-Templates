@@ -25,18 +25,7 @@ namespace BootstrapBlazorApp.Server
             services.AddRazorPages();
             services.AddServerSideBlazor();
 
-            services.AddBootstrapBlazor(localizationAction: options =>
-            {
-                options.AdditionalJsonAssemblies = new[] { GetType().Assembly };
-            });
-
-            services.AddRequestLocalization<IOptions<BootstrapBlazorOptions>>((localizerOption, blazorOption) =>
-            {
-                var supportedCultures = blazorOption.Value.GetSupportedCultures();
-
-                localizerOption.SupportedCultures = supportedCultures;
-                localizerOption.SupportedUICultures = supportedCultures;
-            });
+            services.AddBootstrapBlazor();
 
             services.AddSingleton<WeatherForecastService>();
 
@@ -55,8 +44,6 @@ namespace BootstrapBlazorApp.Server
             {
                 app.UseExceptionHandler("/Error");
             }
-
-            app.UseRequestLocalization(app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>().Value);
 
             app.UseStaticFiles();
 
