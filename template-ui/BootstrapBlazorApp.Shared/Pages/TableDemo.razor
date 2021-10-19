@@ -2,11 +2,11 @@
 
 <h1>Table</h1>
 
-<Table TItem="Foo" IsPagination="true" PageItemsSource="@PageItemsSource"
+<Table TItem="Foo" IsPagination="true" PageItemsSource="PageItemsSource"
        IsStriped="true" IsBordered="true" ShowSkeleton="true" IsMultipleSelect="true"
        ShowToolbar="true" ShowSearch="true" ShowExtendButtons="true"
-       UseInjectDataService="true" AutoGenerateColumns="true">
+       UseInjectDataService="true" AutoGenerateColumns="true" EditMode="EditMode.InCell">
     <TableColumns>
-        <TableColumn @bind-Field="@context.Hobby" Items="@Hobbys" />
+        <TableColumn @bind-Field="@context.Hobby" Items="GetHobbys(context)" />
     </TableColumns>
 </Table>

@@ -1,8 +1,8 @@
 ﻿using BootstrapBlazor.Components;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace BootstrapBlazorApp.Shared.Pages
 {
@@ -14,17 +14,9 @@ namespace BootstrapBlazorApp.Shared.Pages
         [Inject]
         private IStringLocalizer<Foo> Localizer { get; set; }
 
-        private IEnumerable<SelectedItem> Hobbys { get; set; }
+        private readonly ConcurrentDictionary<Foo, IEnumerable<SelectedItem>> _cache = new();
 
-        /// <summary>
-        /// 
-        /// </summary>
-        protected override async Task OnInitializedAsync()
-        {
-            await base.OnInitializedAsync();
-
-            Hobbys = Foo.GenerateHobbys(Localizer);
-        }
+        private IEnumerable<SelectedItem> GetHobbys(Foo item) => _cache.GetOrAdd(item, f => Foo.GenerateHobbys(Localizer));
 
         /// <summary>
         /// 
