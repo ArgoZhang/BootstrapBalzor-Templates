@@ -5,7 +5,7 @@
 <Table TItem="Foo" IsPagination="true" PageItemsSource="PageItemsSource"
        IsStriped="true" IsBordered="true" ShowSkeleton="true" IsMultipleSelect="true"
        ShowToolbar="true" ShowSearch="true" ShowExtendButtons="true"
-       UseInjectDataService="true" AutoGenerateColumns="true" EditMode="EditMode.InCell">
+       UseInjectDataService="true" AutoGenerateColumns="true" EditMode="EditMode.Popup">
     <TableColumns>
         <TableColumn @bind-Field="@context.Hobby" Items="GetHobbys(context)" />
     </TableColumns>

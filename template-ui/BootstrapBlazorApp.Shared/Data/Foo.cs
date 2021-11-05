@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
-namespace BootstrapBlazorApp.Shared.Pages
+namespace BootstrapBlazorApp.Shared.Data
 {
     /// <summary>
     ///

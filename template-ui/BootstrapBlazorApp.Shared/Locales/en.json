@@ -1,5 +1,5 @@
 ﻿{
-  "BootstrapBlazorApp.Shared.Pages.Foo": {
+  "BootstrapBlazorApp.Shared.Data.Foo": {
     "Name": "Name",
     "DateTime": "DateTime",
     "Address": "Address",
