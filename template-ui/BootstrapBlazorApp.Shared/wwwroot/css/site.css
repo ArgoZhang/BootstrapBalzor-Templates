@@ -111,8 +111,7 @@
         width: 100%;
     }
 
-.layout.is-page .layout-right,
-.layout.is-page .layout-main {
+.layout.is-page .layout-right {
     background-color: #fff;
 }
 
