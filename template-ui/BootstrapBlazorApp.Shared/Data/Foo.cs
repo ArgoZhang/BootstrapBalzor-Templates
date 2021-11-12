@@ -4,10 +4,7 @@
 
 using BootstrapBlazor.Components;
 using Microsoft.Extensions.Localization;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 
 namespace BootstrapBlazorApp.Shared.Data
 {
@@ -31,7 +28,7 @@ namespace BootstrapBlazorApp.Shared.Data
         [Required(ErrorMessage = "{0}不能为空")]
         [AutoGenerateColumn(Order = 10, Filterable = true, Searchable = true)]
         [Display(Name = "姓名")]
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         /// <summary>
         ///
@@ -46,7 +43,7 @@ namespace BootstrapBlazorApp.Shared.Data
         [Display(Name = "地址")]
         [Required(ErrorMessage = "{0}不能为空")]
         [AutoGenerateColumn(Order = 20, Filterable = true, Searchable = true)]
-        public string Address { get; set; }
+        public string? Address { get; set; }
 
         /// <summary>
         ///

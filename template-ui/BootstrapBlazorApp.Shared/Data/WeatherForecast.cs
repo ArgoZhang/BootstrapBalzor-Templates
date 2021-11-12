@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BootstrapBlazorApp.Shared.Data
+﻿namespace BootstrapBlazorApp.Shared.Data
 {
     /// <summary>
     /// 

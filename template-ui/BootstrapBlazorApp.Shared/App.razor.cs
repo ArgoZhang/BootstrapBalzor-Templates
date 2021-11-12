@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using System;
-using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BootstrapBlazorApp.Shared
 {
@@ -14,7 +13,8 @@ namespace BootstrapBlazorApp.Shared
         /// 
         /// </summary>
         [Inject]
-        private IJSRuntime JSRuntime { get; set; }
+        [NotNull]
+        private IJSRuntime? JSRuntime { get; set; }
 
         /// <summary>
         /// 

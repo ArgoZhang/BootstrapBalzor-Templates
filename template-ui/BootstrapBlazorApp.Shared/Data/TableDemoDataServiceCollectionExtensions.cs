@@ -1,13 +1,8 @@
 ﻿using BootstrapBlazor.Components;
-using BootstrapBlazorApp.Shared.Pages;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Localization;
-using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BootstrapBlazorApp.Shared.Data
 {
@@ -35,7 +30,8 @@ namespace BootstrapBlazorApp.Shared.Data
     {
         private static readonly ConcurrentDictionary<Type, Func<IEnumerable<TModel>, string, SortOrder, IEnumerable<TModel>>> SortLambdaCache = new();
 
-        private List<TModel> Items { get; set; }
+        [NotNull]
+        private List<TModel>? Items { get; set; }
 
         private IStringLocalizer<Foo> Localizer { get; set; }
 
@@ -131,18 +127,21 @@ namespace BootstrapBlazorApp.Shared.Data
                         Education = foo.Education,
                         Hobby = foo.Hobby
                     } as TModel;
-                    Items?.Add(item);
+                    Items.Add(item!);
                 }
                 else
                 {
-                    var f = Items.First(i => (i as Foo)!.Id == foo.Id) as Foo;
-                    f.Name = foo.Name;
-                    f.Address = foo.Address;
-                    f.Complete = foo.Complete;
-                    f.Count = foo.Count;
-                    f.DateTime = foo.DateTime;
-                    f.Education = foo.Education;
-                    f.Hobby = foo.Hobby;
+                    var f = Items.OfType<Foo>().FirstOrDefault(i => i.Id == foo.Id);
+                    if (f != null)
+                    {
+                        f.Name = foo.Name;
+                        f.Address = foo.Address;
+                        f.Complete = foo.Complete;
+                        f.Count = foo.Count;
+                        f.DateTime = foo.DateTime;
+                        f.Education = foo.Education;
+                        f.Hobby = foo.Hobby;
+                    }
                 }
                 ret = true;
             }
@@ -153,7 +152,7 @@ namespace BootstrapBlazorApp.Shared.Data
         {
             foreach (var model in models)
             {
-                Items?.Remove(model);
+                Items.Remove(model);
             }
 
             return base.DeleteAsync(models);

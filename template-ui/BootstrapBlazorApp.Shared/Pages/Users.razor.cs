@@ -2,11 +2,8 @@
 using BootstrapBlazorApp.Shared.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
-using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BootstrapBlazorApp.Shared.Pages
 {
@@ -16,21 +13,17 @@ namespace BootstrapBlazorApp.Shared.Pages
     public partial class Users
     {
         [Inject]
-        private IStringLocalizer<Foo> Localizer { get; set; }
+        [NotNull]
+        private IStringLocalizer<Foo>? Localizer { get; set; }
 
         /// <summary>
         /// 获得/设置 分页配置数据源
         /// </summary>
-        private IEnumerable<int> PageItemsSource => new int[] { 5 };
+        private static IEnumerable<int> PageItemsSource => new int[] { 5 };
 
-        /// <summary>
-        /// 获得/设置 花名册数据源
-        /// </summary>
-        private IEnumerable<Foo> UserList { get; set; }
+        private static string GetAvatarUrl(int id) => $"_content/BootstrapBlazorApp.Shared/images/avatars/150-{id}.jpg";
 
-        private string GetAvatarUrl(int id) => $"_content/BootstrapBlazorApp.Shared/images/avatars/150-{id}.jpg";
-
-        private Color GetProgressColor(int count) => count switch
+        private static Color GetProgressColor(int count) => count switch
         {
             >= 0 and < 10 => Color.Secondary,
             >= 10 and < 20 => Color.Danger,
@@ -40,7 +33,8 @@ namespace BootstrapBlazorApp.Shared.Pages
             _ => Color.Success
         };
 
-        private IEnumerable<Foo> Items { get; set; }
+        [NotNull]
+        private IEnumerable<Foo>? Items { get; set; }
 
         private static readonly ConcurrentDictionary<Type, Func<IEnumerable<Foo>, string, SortOrder, IEnumerable<Foo>>> SortLambdaCache = new();
 

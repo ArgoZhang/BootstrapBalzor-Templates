@@ -1,7 +1,5 @@
 ﻿using BootstrapBlazor.Components;
 using Microsoft.AspNetCore.Components.Routing;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace BootstrapBlazorApp.Shared.Shared
 {
@@ -24,25 +22,15 @@ namespace BootstrapBlazorApp.Shared.Shared
 
         private bool ShowFooter { get; set; } = true;
 
-        private List<MenuItem> Menus { get; set; }
-
-        private Dictionary<string, string> TabItemTextDictionary { get; set; }
+        private List<MenuItem>? Menus { get; set; }
 
         /// <summary>
         /// OnInitialized 方法
         /// </summary>
-        protected override async Task OnInitializedAsync()
+        protected override void OnInitialized()
         {
-            await base.OnInitializedAsync();
+            base.OnInitialized();
 
-            // 模拟异步线程切换，正式代码中删除此行代码
-            await Task.Yield();
-
-            // 菜单获取可以通过数据库获取，此处为示例直接拼装的菜单集合
-            TabItemTextDictionary = new()
-            {
-                [""] = "Index"
-            };
             Menus = GetIconSideMenuItems();
         }
 

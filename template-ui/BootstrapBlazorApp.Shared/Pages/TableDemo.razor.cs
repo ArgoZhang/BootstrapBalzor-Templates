@@ -3,7 +3,7 @@ using BootstrapBlazorApp.Shared.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BootstrapBlazorApp.Shared.Pages
 {
@@ -13,7 +13,8 @@ namespace BootstrapBlazorApp.Shared.Pages
     public partial class TableDemo : ComponentBase
     {
         [Inject]
-        private IStringLocalizer<Foo> Localizer { get; set; }
+        [NotNull]
+        private IStringLocalizer<Foo>? Localizer { get; set; }
 
         private readonly ConcurrentDictionary<Foo, IEnumerable<SelectedItem>> _cache = new();
 
