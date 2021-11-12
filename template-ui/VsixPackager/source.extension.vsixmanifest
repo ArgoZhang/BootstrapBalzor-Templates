@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="BootstrapBlazorVsix.c821b4dc-2e1f-4784-98da-16692643a224" Version="5.8" Language="en-US" Publisher="Argo Zhang" />
-        <DisplayName>Bootstrap Blazor Project Template</DisplayName>
+        <Identity Id="BootstrapBlazor2022Vsix.c821b4dc-2e1f-4784-98da-16692643a224" Version="6.0" Language="en-US" Publisher="Argo Zhang" />
+        <DisplayName>Bootstrap Blazor Project Template 2022</DisplayName>
         <Description xml:space="preserve">Project templates for creating Bootstrap Blazor apps that run on the server in an ASP.NET Core app or in the browser on WebAssembly (wasm). These templates can be used to build web apps rich dynamic user interface (UIs).</Description>
         <License>LICENSE.txt</License>
         <Icon>Properties\project-icon.png</Icon>
@@ -10,13 +10,15 @@
         <Tags>blazor; razor; template; C#; C sharp;</Tags>
     </Metadata>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[16.0, 17.0)" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, )">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
     </Installation>
     <Dependencies>
         <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
     </Dependencies>
     <Prerequisites>
-        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0,17.0)" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,)" DisplayName="Visual Studio core editor" />
     </Prerequisites>
     <Assets>
         <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
