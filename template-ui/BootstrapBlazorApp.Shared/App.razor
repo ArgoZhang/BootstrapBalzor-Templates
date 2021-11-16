@@ -1,8 +1,10 @@
-﻿<Router AppAssembly="@typeof(MainLayout).Assembly" PreferExactMatches="@true">
+﻿<Router AppAssembly="@typeof(MainLayout).Assembly">
     <Found Context="routeData">
+        <PageTitle>Bootstrap Blazor Project Template</PageTitle>
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
     </Found>
     <NotFound>
+        <PageTitle>Not found</PageTitle>
         <LayoutView Layout="@typeof(MainLayout)">
             <p>Sorry, there's nothing at this address.</p>
         </LayoutView>
