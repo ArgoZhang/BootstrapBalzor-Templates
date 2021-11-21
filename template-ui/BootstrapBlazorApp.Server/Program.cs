@@ -19,9 +19,6 @@ builder.Services.AddTableDemoDataService();
 
 var app = builder.Build();
 
-// 注册容器
-app.Services.RegisterProvider();
-
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
