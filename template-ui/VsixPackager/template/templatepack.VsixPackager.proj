@@ -28,7 +28,7 @@
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/.git/**/*" />
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/.gitee/**/*" />
     <ExcludeFromPackage Include="$(TemplateSourceRoot)**/.github/**/*" />
-
+    <ExcludeFromPackage Include="$(TemplateSourceRoot)VsixPackager/**/*" />
     <TemplateFiles  Include="$(TemplateSourceRoot)/**/*"
                     Exclude="@(ExcludeFromPackage)" />
   </ItemGroup>
