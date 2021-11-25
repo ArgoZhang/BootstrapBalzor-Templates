@@ -1,0 +1,86 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>BootstrapBlazorApp.Shared</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>false</CreateNewFolder>
+    <DefaultName>BootstrapBlazorApp.Shared</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="BootstrapBlazorApp.Shared.csproj" File="BootstrapBlazorApp.Shared.csproj" ReplaceParameters="true">
+      <Folder Name="Data" TargetFolderName="Data">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Foo.cs">Foo.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="TableDemoDataServiceCollectionExtensions.cs">TableDemoDataServiceCollectionExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="WeatherForecast.cs">WeatherForecast.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="WeatherForecastService.cs">WeatherForecastService.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Locales" TargetFolderName="Locales">
+        <ProjectItem ReplaceParameters="true" TargetFileName="en.json">en.json</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="zh.json">zh.json</ProjectItem>
+      </Folder>
+      <Folder Name="Pages" TargetFolderName="Pages">
+        <ProjectItem ReplaceParameters="false" TargetFileName="Counter.razor">Counter.razor</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FetchData.razor">FetchData.razor</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Index.razor">Index.razor</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="TableDemo.razor">TableDemo.razor</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="TableDemo.razor.cs">TableDemo.razor.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Users.razor">Users.razor</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Users.razor.cs">Users.razor.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Shared" TargetFolderName="Shared">
+        <ProjectItem ReplaceParameters="true" TargetFileName="MainLayout.razor">MainLayout.razor</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MainLayout.razor.cs">MainLayout.razor.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SurveyPrompt.razor">SurveyPrompt.razor</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Widget.razor">Widget.razor</ProjectItem>
+      </Folder>
+      <Folder Name="wwwroot" TargetFolderName="wwwroot">
+        <Folder Name="css" TargetFolderName="css">
+          <ProjectItem ReplaceParameters="true" TargetFileName="motronic.css">motronic.css</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="site.css">site.css</ProjectItem>
+        </Folder>
+        <Folder Name="images" TargetFolderName="images">
+          <Folder Name="avatars" TargetFolderName="avatars">
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-1.jpg">150-1.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-10.jpg">150-10.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-11.jpg">150-11.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-12.jpg">150-12.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-13.jpg">150-13.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-14.jpg">150-14.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-15.jpg">150-15.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-16.jpg">150-16.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-17.jpg">150-17.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-18.jpg">150-18.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-19.jpg">150-19.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-2.jpg">150-2.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-20.jpg">150-20.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-21.jpg">150-21.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-22.jpg">150-22.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-23.jpg">150-23.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-24.jpg">150-24.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-3.jpg">150-3.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-4.jpg">150-4.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-5.jpg">150-5.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-6.jpg">150-6.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-7.jpg">150-7.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-8.jpg">150-8.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="150-9.jpg">150-9.jpg</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Argo.png">Argo.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Argo-C.png">Argo-C.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="brand.png">brand.png</ProjectItem>
+        </Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="_Imports.razor">_Imports.razor</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="App.razor">App.razor</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.razor.cs">App.razor.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
