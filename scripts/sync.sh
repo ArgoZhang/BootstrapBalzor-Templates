@@ -7,7 +7,7 @@ if [ $1 = "" ]; then
     exit 1
 fi
 
-sourceDir=$1../template-ui/src
+sourceDir=$1../src
 targetDir=$1
 
 echo "Ready to copy files to dist"

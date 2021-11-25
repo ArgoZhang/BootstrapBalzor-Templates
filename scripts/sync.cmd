@@ -4,7 +4,7 @@ if "%1" == "" (
     exit /B
 )
 
-set sourceDir=%1..\template-ui
+set sourceDir=%1..\src
 set targetDir=%1src
 
 echo "Ready to copy files to dist
