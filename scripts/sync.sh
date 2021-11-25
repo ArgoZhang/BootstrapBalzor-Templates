@@ -24,4 +24,6 @@ rm -rf $sourceDir/BootstrapBlazorApp.Shared/bin
 rm -rf $sourceDir/BootstrapBlazorApp.Shared/obj
 \cp -rf $sourceDir $targetDir
 
+\cp $sourceDir/../src/*.sln $targetDir
+
 echo Sync success!

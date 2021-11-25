@@ -1,5 +1,6 @@
 ﻿using BootstrapBlazor.Components;
 using Microsoft.AspNetCore.Components.Routing;
+using System.Collections.Generic;
 
 namespace BootstrapBlazorApp.Shared.Shared
 {
