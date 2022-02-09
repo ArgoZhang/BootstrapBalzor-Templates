@@ -18,7 +18,7 @@
     "Foo.Address2": "地球、中国、上海市普陀区金沙江路 {0} 弄 这里是超长单元格示例",
     "Foo.BindValue": "绑定值"
   },
-  "BootstrapBlazorApp.Shared.Pages.EnumEducation": {
+  "BootstrapBlazorApp.Shared.Data.EnumEducation": {
     "PlaceHolder": "请选择 ...",
     "Primary": "小学",
     "Middel": "中学"

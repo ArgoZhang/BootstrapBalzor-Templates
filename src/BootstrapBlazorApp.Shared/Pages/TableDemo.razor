@@ -2,12 +2,12 @@
 @attribute [TabItemOption(Text = "Table")]
 <PageTitle>Table</PageTitle>
 
-<h1>Table</h1>
+<h1>Table - 固定标签页</h1>
 
 <Table TItem="Foo" IsPagination="true" PageItemsSource="PageItemsSource"
        IsStriped="true" IsBordered="true" ShowSkeleton="true" IsMultipleSelect="true"
        ShowToolbar="true" ShowSearch="true" ShowExtendButtons="true"
-       UseInjectDataService="true" AutoGenerateColumns="true" EditMode="EditMode.Popup">
+       AutoGenerateColumns="true" EditMode="EditMode.Popup">
     <TableColumns>
         <TableColumn @bind-Field="@context.Hobby" Items="GetHobbys(context)" />
     </TableColumns>

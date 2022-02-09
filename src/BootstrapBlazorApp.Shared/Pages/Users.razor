@@ -4,11 +4,11 @@
 
 <h1>花名册</h1>
 
-<p>只读数据</p>
+<p>只读数据 - 更改每页显示数量体验固定表头功能</p>
 
 <div class="table-users scroll">
-    <Table TItem="Foo" IsPagination="true" PageItemsSource="@PageItemsSource" RenderMode="TableRenderMode.Table"
-           IsStriped="true" IsBordered="true" UseInjectDataService="true" OnQueryAsync="OnQueryAsync">
+    <Table TItem="Foo" IsPagination="true" PageItemsSource="@PageItemsSource" RenderMode="TableRenderMode.Table" IsFixedHeader="true"
+           IsStriped="true" IsBordered="true" OnQueryAsync="OnQueryAsync">
         <TableColumns>
             <TableColumn @bind-Field="@context.Name" Width="220">
                 <Template Context="value">
