@@ -1,8 +1,4 @@
-﻿using BootstrapBlazor.Components;
-using BootstrapBlazorApp.Shared.Data;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+﻿using BootstrapBlazorApp.Shared.Data;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);

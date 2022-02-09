@@ -4,10 +4,7 @@
 
 using BootstrapBlazor.Components;
 using Microsoft.Extensions.Localization;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 
 namespace BootstrapBlazorApp.Shared.Data
 {
