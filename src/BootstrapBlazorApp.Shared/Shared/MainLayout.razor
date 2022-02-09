@@ -9,8 +9,14 @@
         <div class="flex-fill d-sm-none">
         </div>
         <Widget></Widget>
-        <img src="_content/BootstrapBlazorApp.Shared/images/Argo.png" class="layout-avatar-right" />
-        <span class="mx-3 d-none d-sm-block">超级管理员</span>
+        <Logout ImageUrl="_content/BootstrapBlazorApp.Shared/images/Argo.png" DisplayName="超级管理员" UserName="Admin">
+            <LinkTemplate>
+                <a href="#"><i class="fa fa-suitcase"></i>个人中心</a>
+                <a href="#"><i class="fa fa-cog"></i>设置</a>
+                <a href="#"><i class="fa fa-bell"></i>通知<span class="badge badge-pill badge-success"></span></a>
+                <LogoutLink />
+            </LinkTemplate>
+        </Logout>
         <div class="layout-drawer" @onclick="@(e => IsOpen = !IsOpen)"><i class="fa fa-gears"></i></div>
     </Header>
     <Side>
