@@ -329,6 +329,7 @@
 .table-users {
     height: auto;
     padding-bottom: .5rem;
+    height: calc(100% - 89px);
 }
 
     .table-users .table-container {

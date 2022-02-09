@@ -22,16 +22,13 @@
 
 .tabs-body {
     background-color: #fff;
+    overflow: auto;
+    height: calc(100vh - 90px - 39px);
 }
 
-.tabs-body-content {
-    border-radius: var(--bs-border-radius);
-    padding: 1rem;
+.tabs-body-content .tabs-body-content {
+    background-color: #f5f8fa;
 }
-
-    .tabs-body-content .tabs-body-content {
-        background-color: #f5f8fa;
-    }
 
 .layout.is-page .layout-footer {
     background-color: #e9ecef;
@@ -44,4 +41,9 @@
 .layout-gotop {
     background: #e9ecef;
     color: #3f4254;
+}
+
+.layout-main,
+.layout-footer {
+    border-left: 1px solid #e6e6e6;
 }
