@@ -2,32 +2,31 @@
 using Microsoft.JSInterop;
 using System.Diagnostics.CodeAnalysis;
 
-namespace BootstrapBlazorApp.Shared
+namespace BootstrapBlazorApp.Shared;
+
+/// <summary>
+/// 
+/// </summary>
+public sealed partial class App
 {
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class App
+    [Inject]
+    [NotNull]
+    private IJSRuntime? JSRuntime { get; set; }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="firstRender"></param>
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        [Inject]
-        [NotNull]
-        private IJSRuntime? JSRuntime { get; set; }
+        await base.OnAfterRenderAsync(firstRender);
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="firstRender"></param>
-        protected override async Task OnAfterRenderAsync(bool firstRender)
+        if (firstRender && OperatingSystem.IsBrowser())
         {
-            await base.OnAfterRenderAsync(firstRender);
-
-            if (firstRender && OperatingSystem.IsBrowser())
-            {
-                await JSRuntime.InvokeVoidAsync("$.loading");
-            }
+            await JSRuntime.InvokeVoidAsync("$.loading");
         }
     }
 }
