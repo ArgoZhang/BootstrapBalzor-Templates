@@ -339,3 +339,7 @@
 .tabs-body-content .table-users {
     height: calc(100vh - 250px);
 }
+
+.cell-label {
+    line-height: 35px;
+}
