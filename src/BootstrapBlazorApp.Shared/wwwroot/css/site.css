@@ -329,9 +329,13 @@
 .table-users {
     height: auto;
     padding-bottom: .5rem;
-    height: calc(100% - 89px);
+    height: calc(100vh - 216px);
 }
 
     .table-users .table-container {
         min-width: 746px;
     }
+
+.tabs-body-content .table-users {
+    height: calc(100vh - 250px);
+}
