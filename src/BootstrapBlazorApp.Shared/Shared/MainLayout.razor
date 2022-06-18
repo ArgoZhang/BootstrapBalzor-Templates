@@ -8,7 +8,6 @@
         <span class="ms-3 flex-sm-fill d-none d-sm-block">Bootstrap of Blazor</span>
         <div class="flex-fill d-sm-none">
         </div>
-        <Widget></Widget>
         <Logout ImageUrl="_content/BootstrapBlazorApp.Shared/images/Argo.png" DisplayName="超级管理员" UserName="Admin">
             <LinkTemplate>
                 <a href="#"><i class="fa fa-suitcase"></i>个人中心</a>
@@ -17,6 +16,7 @@
                 <LogoutLink />
             </LinkTemplate>
         </Logout>
+        <Widget></Widget>
         <div class="layout-drawer" @onclick="@(e => IsOpen = !IsOpen)"><i class="fa fa-gears"></i></div>
     </Header>
     <Side>
