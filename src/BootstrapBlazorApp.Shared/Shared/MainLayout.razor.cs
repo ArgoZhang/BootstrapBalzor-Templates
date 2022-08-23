@@ -38,12 +38,12 @@ public sealed partial class MainLayout
     {
         var menus = new List<MenuItem>
         {
-            new MenuItem() { Text = "返回组件库", Icon = "fa fa-fw fa-home", Url = "https://www.blazor.zone/components" },
-            new MenuItem() { Text = "Index", Icon = "fa fa-fw fa-fa", Url = "/" , Match = NavLinkMatch.All},
-            new MenuItem() { Text = "Counter", Icon = "fa fa-fw fa-check-square-o", Url = "/counter" },
-            new MenuItem() { Text = "FetchData", Icon = "fa fa-fw fa-database", Url = "fetchdata" },
-            new MenuItem() { Text = "Table", Icon = "fa fa-fw fa-table", Url = "table" },
-            new MenuItem() { Text = "花名册", Icon = "fa fa-fw fa-users", Url = "users" }
+            new MenuItem() { Text = "返回组件库", Icon = "fa-solid fa-fw fa-home", Url = "https://www.blazor.zone/components" },
+            new MenuItem() { Text = "Index", Icon = "fa-solid fa-fw fa-flag", Url = "/" , Match = NavLinkMatch.All},
+            new MenuItem() { Text = "Counter", Icon = "fa-solid fa-fw fa-check-square", Url = "/counter" },
+            new MenuItem() { Text = "FetchData", Icon = "fa-solid fa-fw fa-database", Url = "fetchdata" },
+            new MenuItem() { Text = "Table", Icon = "fa-solid fa-fw fa-table", Url = "table" },
+            new MenuItem() { Text = "花名册", Icon = "fa-solid fa-fw fa-users", Url = "users" }
         };
 
         return menus;
