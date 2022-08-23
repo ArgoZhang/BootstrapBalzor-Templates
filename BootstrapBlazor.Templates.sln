@@ -26,7 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "windows", "windows", "{40A9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootstrapBlazorApp.Shared", "src\BootstrapBlazorApp.Shared\BootstrapBlazorApp.Shared.csproj", "{BB558D17-5445-4D78-A53E-1168C9354350}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootstrapBlazorApp.Client", "src\BootstrapBlazorApp.WebAssembly\BootstrapBlazorApp.Client.csproj", "{3BA203A5-B8D3-444F-B32A-771F80D1F835}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootstrapBlazorApp.WebAssembly", "src\BootstrapBlazorApp.WebAssembly\BootstrapBlazorApp.WebAssembly.csproj", "{3BA203A5-B8D3-444F-B32A-771F80D1F835}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootstrapBlazorApp.Server", "src\BootstrapBlazorApp.Server\BootstrapBlazorApp.Server.csproj", "{29A44D2B-08C1-4CEA-9F95-7B0F374008BC}"
 EndProject
