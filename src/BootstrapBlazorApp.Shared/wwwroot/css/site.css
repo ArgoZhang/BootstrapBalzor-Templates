@@ -326,18 +326,13 @@
     color: #c0c4cc;
 }
 
-.table-users {
+.tabs-body-content {
     height: auto;
-    padding-bottom: .5rem;
-    height: calc(100vh - 216px);
 }
 
-    .table-users .table-container {
-        min-width: 746px;
-    }
-
-.tabs-body-content .table-users {
-    height: calc(100vh - 282px);
+.table-users {
+    padding-bottom: .5rem;
+    height: calc(100vh - 254px);
 }
 
 .cell-label {
