@@ -10,7 +10,7 @@
     <Table TItem="Foo" IsPagination="true" PageItemsSource="@PageItemsSource" RenderMode="TableRenderMode.Table" IsFixedHeader="true"
            IsStriped="true" IsBordered="true" OnQueryAsync="OnQueryAsync">
         <TableColumns>
-            <TableColumn @bind-Field="@context.Name" Width="220">
+            <TableColumn @bind-Field="@context.Name" Width="260">
                 <Template Context="value">
                     <div class="d-flex">
                         @{
