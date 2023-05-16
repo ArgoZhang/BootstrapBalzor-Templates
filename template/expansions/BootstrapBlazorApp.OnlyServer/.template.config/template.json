@@ -1,0 +1,22 @@
+﻿{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Argo Zhang(argo@163.com)",
+  "classifications": [
+    "Common",
+    "C#",
+    "Web",
+    "Blazor"
+  ],
+  "identity": "BootstrapBlazorServer",
+  "name": "Bootstrap Blazor App Server",
+  "shortName": "bbapp.s",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "defaultName": "BootstrapBlazorApp.OnlyServer",
+  "preferDefaultName": true,
+  "preferNameDirectory": true,
+  "sourceName": "BootstrapBlazorApp.OnlyServer"
+
+}
