@@ -20,8 +20,4 @@
     <PackageReference Include="BootstrapBlazor" Version="7.*" />
   </ItemGroup>
 
-  <ItemGroup>
-    <SupportedPlatform Include="browser" />
-  </ItemGroup>
-
 </Project>
