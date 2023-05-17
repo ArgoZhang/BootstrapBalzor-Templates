@@ -11,9 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{6F4F
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "template", "template", "{C290B017-2D47-460A-A489-228561E9A244}"
-	ProjectSection(SolutionItems) = preProject
-		template\bin\Debug\Bootstrap.Blazor.Templates.7.4.1.nupkg = template\bin\Debug\Bootstrap.Blazor.Templates.7.4.1.nupkg
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BootstrapBlazorServerPack", "template\BootstrapBlazorServerPack.csproj", "{E1FDAA3C-3A63-40DB-A986-8D2E171754B9}"
 EndProject
