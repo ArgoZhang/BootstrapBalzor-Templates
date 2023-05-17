@@ -23,7 +23,6 @@
 .tabs-body {
     background-color: #fff;
     overflow: auto;
-    height: calc(100vh - 90px - 39px);
 }
 
 .tabs-body-content .tabs-body-content {

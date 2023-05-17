@@ -18,7 +18,8 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.
 builder.Services.AddBootstrapBlazor(op =>
 {
     // 设置组件默认使用中文
-    op.DefaultCultureInfo = "zh";
+    op.DefaultCultureInfo = "zh-CN";
+    op.IgnoreLocalizerMissing = true;
 });
 
 builder.Services.AddSingleton<WeatherForecastService>();
