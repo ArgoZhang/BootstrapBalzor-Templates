@@ -1,4 +1,7 @@
-﻿<BootstrapBlazorRoot>
+﻿@inherits BootstrapModuleComponentBase
+@attribute [JSModuleAutoLoader("./_content/BootstrapBlazorApp.Shared/App.razor.js", JSObjectReference = true, AutoInvokeDispose = false)]
+
+<BootstrapBlazorRoot>
     <Router AppAssembly="@typeof(MainLayout).Assembly">
         <Found Context="routeData">
             <PageTitle>Bootstrap Blazor Project Template</PageTitle>
