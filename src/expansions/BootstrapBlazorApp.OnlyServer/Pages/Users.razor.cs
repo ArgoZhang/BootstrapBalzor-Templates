@@ -67,10 +67,10 @@ public partial class Users
             isSearched = !string.IsNullOrEmpty(model.Name) || !string.IsNullOrEmpty(model.Address);
         }
 
-        if (options.Searchs.Any())
+        if (options.Searches.Any())
         {
             // 针对 SearchText 进行模糊查询
-            items = items.Where(options.Searchs.GetFilterFunc<Foo>(FilterLogic.Or));
+            items = items.Where(options.Searches.GetFilterFunc<Foo>(FilterLogic.Or));
         }
 
         // 过滤
