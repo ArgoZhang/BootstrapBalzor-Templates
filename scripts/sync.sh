@@ -7,7 +7,7 @@ if [ $1 = "" ]; then
     exit 1
 fi
 
-sourceDir=$1../src
+sourceDir=$1../src/net7
 targetDir=$1
 
 expansionSourceDir=$1..\src\expansions

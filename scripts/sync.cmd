@@ -4,7 +4,7 @@ if "%1" == "" (
     exit /B
 )
 
-set sourceDir=%1..\src
+set sourceDir=%1..\src\net7
 set targetDir=%1src
 
 set expansionSourceDir=%1..\src\expansions
@@ -25,8 +25,8 @@ rd /Q /S %sourceDir%\BootstrapBlazorApp.Shared\bin
 rd /Q /S %sourceDir%\BootstrapBlazorApp.Shared\obj
 
 
-rd /Q /S %expansionTargetDir%\BootstrapBlazorApp.OnlyServer /XD .template.config
-rd /Q /S %expansionTargetDir%\BootstrapBlazorApp.OnlyWasm /XD .template.config
+rd /Q /S %expansionTargetDir%\BootstrapBlazorApp.OnlyServer .template.config
+rd /Q /S %expansionTargetDir%\BootstrapBlazorApp.OnlyWasm .template.config
 
 rd /Q /S %expansionSourceDir%\BootstrapBlazorApp.OnlyServer\bin
 rd /Q /S %expansionSourceDir%\BootstrapBlazorApp.OnlyServer\obj
@@ -43,7 +43,7 @@ xcopy %sourceDir%\BootstrapBlazorApp.WebAssembly %targetDir%\BootstrapBlazorApp.
 mkdir %targetDir%\BootstrapBlazorApp.Shared
 xcopy %sourceDir%\BootstrapBlazorApp.Shared %targetDir%\BootstrapBlazorApp.Shared /S /R /Y
 
-xcopy %sourceDir%\..\src\*.sln %targetDir% /Y
+xcopy %sourceDir%\*.sln %targetDir% /Y
 
 mkdir %expansionTargetDir%\BootstrapBlazorApp.OnlyServer
 xcopy %expansionSourceDir%\BootstrapBlazorApp.OnlyServer %expansionTargetDir%\BootstrapBlazorApp.OnlyServer /S /R /Y
