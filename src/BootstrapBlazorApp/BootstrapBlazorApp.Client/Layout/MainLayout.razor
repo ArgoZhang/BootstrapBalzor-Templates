@@ -16,7 +16,7 @@
                 <LogoutLink />
             </LinkTemplate>
         </Logout>
-        <div class="layout-drawer" @onclick="@(e => IsOpen = !IsOpen)"><i class="fa fa-gears"></i></div>
+        <div class="layout-drawer" @onclick="@(e => IsOpen = !IsOpen)"><i class="fa fa-palette"></i></div>
     </Header>
     <Side>
         <div class="layout-banner">
@@ -44,8 +44,7 @@
 <Drawer Placement="Placement.Right" @bind-IsOpen="@IsOpen" IsBackdrop="true">
     <div class="layout-drawer-body">
         <div class="btn btn-info w-100" @onclick="@(e => IsOpen = false)">点击关闭</div>
-        <div class="page-layout-demo-option">
-            <p>布局调整</p>
+        <GroupBox Title="布局调整">
             <div class="row">
                 <div class="col-6">
                     <div class="layout-item @(IsFullSide ? "active d-flex" : "d-flex")" @onclick="@(e => IsFullSide = true)" data-toggle="tooltip" title="左右结构">
@@ -70,15 +69,14 @@
                             <div class="layout-right flex-fill">
                             </div>
                         </div>
-                        <div class="layout-footer">
+                        <div class="layout-right-footer">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </GroupBox>
 
-        <div class="page-layout-demo-option">
-            <p>固定调整</p>
+        <GroupBox Title="固定调整">
             <div class="row">
                 <div class="col-6 d-flex align-items-center">
                     <Switch @bind-Value="@IsFixedHeader" OnColor="@Color.Success" OffColor="@Color.Secondary"></Switch>
@@ -103,34 +101,9 @@
                     <span class="cell-label">显示页脚</span>
                 </div>
             </div>
-        </div>
+        </GroupBox>
 
-        <div class="page-layout-demo-option">
-            <p>主题配色</p>
-            <div class="row">
-                <div class="col-2">
-                    <span class="color color1" @onclick="@(e => Theme = "color1")"></span>
-                </div>
-                <div class="col-2">
-                    <span class="color color2" @onclick="@(e => Theme = "color2")"></span>
-                </div>
-                <div class="col-2">
-                    <span class="color color3" @onclick="@(e => Theme = "color3")"></span>
-                </div>
-                <div class="col-2">
-                    <span class="color color4" @onclick="@(e => Theme = "color4")"></span>
-                </div>
-                <div class="col-2">
-                    <span class="color color5" @onclick="@(e => Theme = "color5")"></span>
-                </div>
-                <div class="col-2">
-                    <span class="color color6" @onclick="@(e => Theme = "color6")"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="page-layout-demo-option">
-            <p>更多设置</p>
+        <GroupBox Title="更多设置">
             <div class="row">
                 <div class="col-6 d-flex align-items-center">
                     <Switch @bind-Value="@UseTabSet" OnColor="@Color.Success" OffColor="@Color.Primary"></Switch>
@@ -139,7 +112,7 @@
                     <span class="cell-label">@(UseTabSet ? "多标签" : "单页")</span>
                 </div>
             </div>
-        </div>
+        </GroupBox>
     </div>
 </Drawer>
 

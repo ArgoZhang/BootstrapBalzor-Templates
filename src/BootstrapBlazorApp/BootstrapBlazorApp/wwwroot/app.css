@@ -30,12 +30,12 @@
     border-right: 1px solid var(--bs-border-color);
 }
 
-.dropdown-logout {
-    --bb-logout-text-color: var(--bb-header-color);
+.layout-footer {
+    border-top: 1px solid var(--bs-border-color);
 }
 
-.drawer-body {
-    padding: 1rem;
+.dropdown-logout {
+    --bb-logout-text-color: var(--bb-header-color);
 }
 
 .logout-avatar {
@@ -47,7 +47,8 @@
 }
 
 .layout-drawer {
-    margin-left: 1rem;
+    padding: 6px;
+    cursor: pointer;
 }
 
 .widget {
