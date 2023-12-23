@@ -1,4 +1,16 @@
-﻿.layout-header {
+﻿:root {
+    --bb-header-color: #e0e0e0;
+    --bb-header-bg: #702cf8;
+}
+
+.layout {
+    --bb-layout-header-background: var(--bb-header-bg);
+    --bb-layout-sidebar-banner-background: var(--bb-header-bg);
+    --bb-layout-header-color: var(--bb-header-color);
+    --bb-layout-title-color: var(--bb-header-color);
+}
+
+.layout-header {
     border-bottom: 1px solid var(--bs-border-color);
 }
 
@@ -10,8 +22,20 @@
     border-bottom: 1px solid var(--bs-border-color);
 }
 
+    .layout-banner .layout-logo {
+        border: 1px solid var(--bb-header-color);
+    }
+
 .layout-side {
     border-right: 1px solid var(--bs-border-color);
+}
+
+.dropdown-logout {
+    --bb-logout-text-color: var(--bb-header-color);
+}
+
+.drawer-body {
+    padding: 1rem;
 }
 
 .logout-avatar {
@@ -26,51 +50,55 @@
     margin-left: 1rem;
 }
 
-.widget .dropdown-menu {
-    --bs-dropdown-min-width: 16rem;
+.widget {
+    --bb-widget-toggle-color: var(--bb-header-color);
 }
 
-.widget .dropdown-body h3 {
-    color: #666666;
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.widget .dropdown-body h4 {
-    color: #444444;
-    font-size: 15px;
-    margin: 0;
-}
-
-.widget .dropdown-body small {
-    color: #999999;
-    font-size: 10px;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.widget .dropdown-item {
-    padding: 0.5rem 1rem;
-    min-width: 100px;
-}
-
-    .widget .dropdown-item > div:not(.progress):last-child {
-        width: calc(100% - 40px);
+    .widget .dropdown-menu {
+        --bs-dropdown-min-width: 16rem;
     }
 
-    .widget .dropdown-item.active,
-    .widget .dropdown-item:active {
-        color: inherit;
+    .widget .dropdown-body h3 {
+        color: #666666;
+        font-size: 14px;
+        margin-bottom: 10px;
     }
 
-    .widget .dropdown-item:not(:nth-of-type(odd)):active {
-        background-color: inherit;
+    .widget .dropdown-body h4 {
+        color: #444444;
+        font-size: 15px;
+        margin: 0;
     }
 
-.widget .progress {
-    height: 7px;
-}
+    .widget .dropdown-body small {
+        color: #999999;
+        font-size: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .widget .dropdown-item {
+        padding: 0.5rem 1rem;
+        min-width: 100px;
+    }
+
+        .widget .dropdown-item > div:not(.progress):last-child {
+            width: calc(100% - 40px);
+        }
+
+        .widget .dropdown-item.active,
+        .widget .dropdown-item:active {
+            color: inherit;
+        }
+
+        .widget .dropdown-item:not(:nth-of-type(odd)):active {
+            background-color: inherit;
+        }
+
+    .widget .progress {
+        height: 7px;
+    }
 
 .table-cell img {
     width: 46px;
