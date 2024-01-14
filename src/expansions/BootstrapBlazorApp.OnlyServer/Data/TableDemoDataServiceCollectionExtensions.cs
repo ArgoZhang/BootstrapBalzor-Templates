@@ -25,19 +25,12 @@ public static class TableDemoDataServiceCollectionExtensions
 /// <summary>
 /// 演示网站示例数据注入服务实现类
 /// </summary>
-internal class TableDemoDataService<TModel> : DataServiceBase<TModel> where TModel : class, new()
+internal class TableDemoDataService<TModel>(IStringLocalizer<Foo> localizer) : DataServiceBase<TModel> where TModel : class, new()
 {
     private static readonly ConcurrentDictionary<Type, Func<IEnumerable<TModel>, string, SortOrder, IEnumerable<TModel>>> SortLambdaCache = new();
 
     [NotNull]
     private List<TModel>? Items { get; set; }
-
-    private IStringLocalizer<Foo> Localizer { get; set; }
-
-    public TableDemoDataService(IStringLocalizer<Foo> localizer)
-    {
-        Localizer = localizer;
-    }
 
     /// <summary>
     /// 查询操作方法
@@ -49,7 +42,7 @@ internal class TableDemoDataService<TModel> : DataServiceBase<TModel> where TMod
         // 此处代码实战中不可用，仅仅为演示而写防止数据全部被删除
         if (Items == null || Items.Count == 0)
         {
-            Items = Foo.GenerateFoo(Localizer).Cast<TModel>().ToList();
+            Items = Foo.GenerateFoo(localizer).Cast<TModel>().ToList();
         }
 
         var items = Items.AsEnumerable();
@@ -70,7 +63,7 @@ internal class TableDemoDataService<TModel> : DataServiceBase<TModel> where TMod
             isSearched = !string.IsNullOrEmpty(model.Name) || !string.IsNullOrEmpty(model.Address);
         }
 
-        if (options.Searches.Any())
+        if (options.Searches.Count != 0)
         {
             // 针对 SearchText 进行模糊查询
             items = items.Where(options.Searches.GetFilterFunc<TModel>(FilterLogic.Or));
@@ -78,7 +71,7 @@ internal class TableDemoDataService<TModel> : DataServiceBase<TModel> where TMod
 
         // 过滤
         var isFiltered = false;
-        if (options.Filters.Any())
+        if (options.Filters.Count != 0)
         {
             items = items.Where(options.Filters.GetFilterFunc<TModel>());
             isFiltered = true;
