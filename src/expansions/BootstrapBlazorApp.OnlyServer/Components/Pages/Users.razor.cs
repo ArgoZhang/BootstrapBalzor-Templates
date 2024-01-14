@@ -1,14 +1,12 @@
 ﻿using BootstrapBlazor.Components;
-
 using BootstrapBlazorApp.OnlyServer.Data;
-
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 
 using System.Collections.Concurrent;
 using System.Diagnostics.CodeAnalysis;
 
-namespace BootstrapBlazorApp.OnlyServer.Pages;
+namespace BootstrapBlazorApp.OnlyServer.Components.Pages;
 
 /// <summary>
 /// 

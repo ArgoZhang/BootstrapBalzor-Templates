@@ -3,9 +3,7 @@
 // Website: https://www.blazor.zone or https://argozhang.github.io/
 
 using BootstrapBlazor.Components;
-
 using Microsoft.Extensions.Localization;
-
 using System.ComponentModel.DataAnnotations;
 
 namespace BootstrapBlazorApp.OnlyServer.Data;
