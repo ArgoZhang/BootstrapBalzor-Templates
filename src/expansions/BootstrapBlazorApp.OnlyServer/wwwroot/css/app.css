@@ -117,6 +117,10 @@
     color: #c0c4cc;
 }
 
+.table-demo {
+    height: calc(100% - 56px);
+}
+
 .table-users-demo {
     height: calc(100vh - 162px);
 }
