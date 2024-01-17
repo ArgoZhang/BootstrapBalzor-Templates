@@ -1,4 +1,5 @@
-using BootstrapBlazorApp.WebAssembly;
+﻿using BootstrapBlazorApp.WebAssembly;
+using BootstrapBlazorApp.WebAssembly.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
@@ -7,5 +8,13 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+builder.Services.AddBootstrapBlazor(options => {
+    options.DefaultCultureInfo = "zh-CN";
+    options.IgnoreLocalizerMissing = true;
+});
+
+// 增加 Table 数据服务操作类
+builder.Services.AddTableDemoDataService();
 
 await builder.Build().RunAsync();
