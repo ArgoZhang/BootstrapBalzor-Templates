@@ -17,26 +17,28 @@ echo "Ready to copy files to dist"
 
 echo copy $sourceDir $targetDir 
 
-rm -rf $targetDir/src/BootstrapBlazorApp*
-rm -rf $sourceDir/.vs
-rm -rf $sourceDir/BootstrapBlazorApp.Server/bin
-rm -rf $sourceDir/BootstrapBlazorApp.Server/obj
-rm -rf $sourceDir/BootstrapBlazorApp.WebAssembly/bin
-rm -rf $sourceDir/BootstrapBlazorApp.WebAssembly/obj
-rm -rf $sourceDir/BootstrapBlazorApp.Shared/bin
-rm -rf $sourceDir/BootstrapBlazorApp.Shared/obj
+rm -rf $targetDir/auto/BootstrapBlazorApp*
+rm -rf $targetDir/server/BootstrapBlazorApp*
+rm -rf $targetDir/webassembly/BootstrapBlazorApp*
 
-find $expansionTargetDir/expansions/BootstrapBlazorApp.Server -not -path $expansionTargetDir/expansions/BootstrapBlazorApp.Server/.template.config* -delete
-rm -rf $expansionSourceDir/BootstrapBlazorApp.Server/bin
-rm -rf $expansionSourceDir/BootstrapBlazorApp.Server/obj
-find $expansionTargetDir/expansions/BootstrapBlazorApp.OnlyWasm -not -path $expansionTargetDir/expansions/BootstrapBlazorApp.OnlyWasm/.template.config* -delete
-rm -rf $expansionSourceDir/BootstrapBlazorApp.OnlyWasm/bin
-rm -rf $expansionSourceDir/BootstrapBlazorApp.OnlyWasm/obj
+rm -rf $sourceDir/Auto/BootstrapBlazorApp/bin
+rm -rf $sourceDir/Auto/BootstrapBlazorApp/obj
+rm -rf $sourceDir/Auto/BootstrapBlazorApp.Client/bin
+rm -rf $sourceDir/Auto/BootstrapBlazorApp.Client/obj
 
-\cp -rf $sourceDir $targetDir
+rm -rf $sourceDir/Server/BootstrapBlazorApp.Server/bin
+rm -rf $sourceDir/Server/BootstrapBlazorApp.Server/obj
 
-\cp $sourceDir/../src/*.sln $targetDir
+rm -rf $sourceDir/WebAssembly/BootstrapBlazorApp.WebAssembly/bin
+rm -rf $sourceDir/WebAssembly/BootstrapBlazorApp.WebAssembly/obj
 
-\cp -rf $expansionSourceDir $expansionTargetDir
+\cp -rf $sourceDir/Auto/*.* $targetDir/auto
+\cp %sourceDir%\.editorconfig $targetDir/auto
+
+\cp -rf $sourceDir/Server/*.* $targetDir/server
+\cp %sourceDir%\.editorconfig $targetDir/server
+
+\cp -rf $sourceDir/WebAssembly/*.* $targetDir/webassembly
+\cp %sourceDir%\.editorconfig $targetDir/webassembly
 
 echo Sync success!
