@@ -33,12 +33,12 @@ rm -rf $sourceDir/WebAssembly/BootstrapBlazorApp.WebAssembly/bin
 rm -rf $sourceDir/WebAssembly/BootstrapBlazorApp.WebAssembly/obj
 
 \cp -rf $sourceDir/Auto/*.* $targetDir/auto
-\cp %sourceDir%\.editorconfig $targetDir/auto
+\cp $sourceDir\.editorconfig $targetDir/auto
 
 \cp -rf $sourceDir/Server/*.* $targetDir/server
-\cp %sourceDir%\.editorconfig $targetDir/server
+\cp $sourceDir\.editorconfig $targetDir/server
 
 \cp -rf $sourceDir/WebAssembly/*.* $targetDir/webassembly
-\cp %sourceDir%\.editorconfig $targetDir/webassembly
+\cp $sourceDir\.editorconfig $targetDir/webassembly
 
 echo Sync success!
