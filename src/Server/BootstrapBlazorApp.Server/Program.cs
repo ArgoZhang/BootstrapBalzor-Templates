@@ -1,5 +1,6 @@
 ﻿using BootstrapBlazorApp.Server.Components;
 using BootstrapBlazorApp.Server.Data;
+using BootstrapBlazorApp.Server.Services;
 using Microsoft.AspNetCore.SignalR;
 using System.Text;
 

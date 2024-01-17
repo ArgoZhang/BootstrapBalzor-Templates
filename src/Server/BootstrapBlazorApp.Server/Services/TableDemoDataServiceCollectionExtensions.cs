@@ -1,9 +1,10 @@
 ﻿using BootstrapBlazor.Components;
+using BootstrapBlazorApp.Server.Data;
 using Microsoft.Extensions.Localization;
 using System.Collections.Concurrent;
 using System.Diagnostics.CodeAnalysis;
 
-namespace BootstrapBlazorApp.Server.Data;
+namespace BootstrapBlazorApp.Server.Services;
 
 /// <summary>
 /// BootstrapBlazor 服务扩展类
