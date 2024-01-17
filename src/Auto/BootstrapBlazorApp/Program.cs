@@ -1,5 +1,4 @@
-using BootstrapBlazoApp.Client.Pages;
-using BootstrapBlazoApp.Components;
+﻿using BootstrapBlazorApp.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +25,6 @@ app.UseAntiforgery();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(BootstrapBlazoApp.Client._Imports).Assembly);
+    .AddAdditionalAssemblies(typeof(BootstrapBlazorApp.Client._Imports).Assembly);
 
 app.Run();
