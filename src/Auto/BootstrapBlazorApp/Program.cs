@@ -7,6 +7,8 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
+builder.Services.AddBootstrapBlazor();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

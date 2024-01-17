@@ -5,15 +5,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="app.css" />
-    <link rel="stylesheet" href="BootstrapBlazoApp.styles.css" />
+    <Link Href="_content/BootstrapBlazor.FontAwesome/css/font-awesome.min.css" />
+    <Link Href="_content/BootstrapBlazor/css/bootstrap.blazor.bundle.min.css" />
+    <Link Href="_content/BootstrapBlazor/css/motronic.min.css" />
+    <Link Href="BootstrapBlazorApp.styles.css" />
+    <Link Href="css/app.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <HeadOutlet @rendermode="InteractiveAuto" />
 </head>
 
 <body>
     <Routes @rendermode="InteractiveAuto" />
+
+    <Script Src="_content/BootstrapBlazor/js/bootstrap.blazor.bundle.min.js"></Script>
     <script src="_framework/blazor.web.js"></script>
 </body>
 
