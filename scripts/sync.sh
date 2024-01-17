@@ -26,9 +26,9 @@ rm -rf $sourceDir/BootstrapBlazorApp.WebAssembly/obj
 rm -rf $sourceDir/BootstrapBlazorApp.Shared/bin
 rm -rf $sourceDir/BootstrapBlazorApp.Shared/obj
 
-find $expansionTargetDir/expansions/BootstrapBlazorApp.OnlyServer -not -path $expansionTargetDir/expansions/BootstrapBlazorApp.OnlyServer/.template.config* -delete
-rm -rf $expansionSourceDir/BootstrapBlazorApp.OnlyServer/bin
-rm -rf $expansionSourceDir/BootstrapBlazorApp.OnlyServer/obj
+find $expansionTargetDir/expansions/BootstrapBlazorApp.Server -not -path $expansionTargetDir/expansions/BootstrapBlazorApp.Server/.template.config* -delete
+rm -rf $expansionSourceDir/BootstrapBlazorApp.Server/bin
+rm -rf $expansionSourceDir/BootstrapBlazorApp.Server/obj
 find $expansionTargetDir/expansions/BootstrapBlazorApp.OnlyWasm -not -path $expansionTargetDir/expansions/BootstrapBlazorApp.OnlyWasm/.template.config* -delete
 rm -rf $expansionSourceDir/BootstrapBlazorApp.OnlyWasm/bin
 rm -rf $expansionSourceDir/BootstrapBlazorApp.OnlyWasm/obj

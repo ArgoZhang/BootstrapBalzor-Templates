@@ -5,50 +5,33 @@ if "%1" == "" (
 )
 
 set sourceDir=%1..\src
-set targetDir=%1src
-
-set expansionSourceDir=%1..\src\expansions
-set expansionTargetDir=%1expansions\
+set targetDir=%1
 
 echo "Ready to copy files to dist
 
-rd /Q /S %targetDir%\BootstrapBlazorApp.Server
-rd /Q /S %targetDir%\BootstrapBlazorApp.WebAssembly
-rd /Q /S %targetDir%\BootstrapBlazorApp.Shared
+rd /Q /S %targetDir%\Auto\BootstrapBlazorApp
+rd /Q /S %targetDir%\Auto\BootstrapBlazorApp.Client
+rd /Q /S %targetDir%\Server\BootstrapBlazorApp.Server
+rd /Q /S %targetDir%\WebAssembly\BootstrapBlazorApp.WebAssembly
 
-rd /Q /S %sourceDir%\.vs
-rd /Q /S %sourceDir%\BootstrapBlazorApp.Server\bin
-rd /Q /S %sourceDir%\BootstrapBlazorApp.Server\obj
-rd /Q /S %sourceDir%\BootstrapBlazorApp.WebAssembly\bin
-rd /Q /S %sourceDir%\BootstrapBlazorApp.WebAssembly\obj
-rd /Q /S %sourceDir%\BootstrapBlazorApp.Shared\bin
-rd /Q /S %sourceDir%\BootstrapBlazorApp.Shared\obj
+rd /Q /S %sourceDir%\Auto\BootstrapBlazorApp\bin
+rd /Q /S %sourceDir%\Auto\BootstrapBlazorApp\obj
+rd /Q /S %sourceDir%\Auto\BootstrapBlazorApp.Client\bin
+rd /Q /S %sourceDir%\Auto\BootstrapBlazorApp.Client\obj
 
+rd /Q /S %sourceDir%\Server\BootstrapBlazorApp.Server\bin
+rd /Q /S %sourceDir%\Server\BootstrapBlazorApp.Server\obj
 
-rd /Q /S %expansionTargetDir%\BootstrapBlazorApp.OnlyServer /XD .template.config
-rd /Q /S %expansionTargetDir%\BootstrapBlazorApp.OnlyWasm /XD .template.config
+rd /Q /S %sourceDir%\WebAssembly\BootstrapBlazorApp.WebAssembly\bin
+rd /Q /S %sourceDir%\WebAssembly\BootstrapBlazorApp.WebAssembly\obj
 
-rd /Q /S %expansionSourceDir%\BootstrapBlazorApp.OnlyServer\bin
-rd /Q /S %expansionSourceDir%\BootstrapBlazorApp.OnlyServer\obj
-rd /Q /S %expansionSourceDir%\BootstrapBlazorApp.OnlyWasm\bin
-rd /Q /S %expansionSourceDir%\BootstrapBlazorApp.OnlyWasm\obj
+xcopy %sourceDir%\Auto\*.* %targetDir%\auto\ /S /R /Y
+xcopy %sourceDir%\.editorconfig %targetDir%\auto /Y
 
+xcopy %sourceDir%\Server\*.* %targetDir%\server /S /R /Y
+xcopy %sourceDir%\.editorconfig %targetDir%\server /Y
 
-mkdir %targetDir%\BootstrapBlazorApp.Server
-xcopy %sourceDir%\BootstrapBlazorApp.Server %targetDir%\BootstrapBlazorApp.Server /S /R /Y
-
-mkdir %targetDir%\BootstrapBlazorApp.WebAssembly
-xcopy %sourceDir%\BootstrapBlazorApp.WebAssembly %targetDir%\BootstrapBlazorApp.WebAssembly /S /R /Y
-
-mkdir %targetDir%\BootstrapBlazorApp.Shared
-xcopy %sourceDir%\BootstrapBlazorApp.Shared %targetDir%\BootstrapBlazorApp.Shared /S /R /Y
-
-xcopy %sourceDir%\..\src\*.sln %targetDir% /Y
-
-mkdir %expansionTargetDir%\BootstrapBlazorApp.OnlyServer
-xcopy %expansionSourceDir%\BootstrapBlazorApp.OnlyServer %expansionTargetDir%\BootstrapBlazorApp.OnlyServer /S /R /Y
-
-mkdir %expansionTargetDir%\BootstrapBlazorApp.OnlyWasm
-xcopy %expansionSourceDir%\BootstrapBlazorApp.OnlyWasm %expansionTargetDir%\BootstrapBlazorApp.OnlyWasm /S /R /Y
+xcopy %sourceDir%\WebAssembly\*.* %targetDir%\webassembly /S /R /Y
+xcopy %sourceDir%\.editorconfig %targetDir%\webassembly /Y
 
 echo Sync success!

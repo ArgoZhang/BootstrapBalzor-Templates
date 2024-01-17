@@ -356,11 +356,11 @@ coverage*.xml
 tools/
 
 # dotnet new template files
-template/src/BootstrapBlazorApp*
+template/auto/**/*
+!template/auto/.template.config/*
 
-template/expansions/BootstrapBlazorApp.OnlyServer/*
-!template/expansions/BootstrapBlazorApp.OnlyServer/.template.config/*
+template/server/**/*
+!template/server/.template.config/*
 
-template/expansions/BootstrapBlazorApp.OnlyWasm/*
-!template/expansions/BootstrapBlazorApp.OnlyWasm/.template.config/*
-
+template/webassembly/**/*
+!template/webassembly/.template.config/*
