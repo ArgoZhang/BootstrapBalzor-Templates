@@ -1,14 +1,14 @@
 ﻿{
   "$schema": "http://json.schemastore.org/template",
-  "author": "Argo Zhang(argo@live.ca)",
+  "author": "argo@live.ca",
   "classifications": [
     "Common",
     "C#",
     "Web",
     "Blazor"
   ],
-  "identity": "BootstrapBlazor",
-  "name": "Bootstrap Blazor App",
+  "identity": "BootstrapBlazorWebApp",
+  "name": "Bootstrap Blazor Web App(Auto)",
   "shortName": "bbapp",
   "tags": {
     "language": "C#",
