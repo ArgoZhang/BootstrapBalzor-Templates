@@ -9,9 +9,10 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-builder.Services.AddBootstrapBlazor(options => {
-    options.DefaultCultureInfo = "zh-CN";
+builder.Services.AddBootstrapBlazor(options =>
+{
     options.IgnoreLocalizerMissing = true;
+    options.DefaultCultureInfo = "zh-CN";
 });
 
 // 增加 Table 数据服务操作类
