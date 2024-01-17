@@ -9,6 +9,7 @@
   ],
   "identity": "BootstrapBlazorServer",
   "name": "Bootstrap Blazor Server App(Server)",
+  "description": "A project template for creating a Bootstrap Blazor server app that runs server-side inside an ASP.NET Core app and handles user interactions overa SignalR connection. This template can be used for web apps with rich dynamic user interfaces (Uls).",
   "shortName": "bbapp-server",
   "tags": {
     "language": "C#",

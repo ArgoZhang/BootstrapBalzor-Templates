@@ -9,6 +9,7 @@
   ],
   "identity": "BootstrapBlazorWasm",
   "name": "Bootstrap Blazor WebAssembly App(Wasm)",
+  "description": "A project template for creating a Bootstrap Blazor app that runs on WebAssembly. This template can be used for web apps with rich dynamic user interfaces (Uls).",
   "shortName": "bbapp-wasm",
   "tags": {
     "language": "C#",

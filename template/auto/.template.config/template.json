@@ -9,6 +9,7 @@
   ],
   "identity": "BootstrapBlazorWebApp",
   "name": "Bootstrap Blazor Web App(Auto)",
+  "description": "A project template for creatinga Bootstrap Blazor web app that supports both server-side rendering and client interactivity. This template can be used for web apps with rich dynamic user interfaces (Uls).",
   "shortName": "bbapp",
   "tags": {
     "language": "C#",
