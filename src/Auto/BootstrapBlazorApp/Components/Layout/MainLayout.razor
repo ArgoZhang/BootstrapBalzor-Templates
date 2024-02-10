@@ -4,7 +4,7 @@
     <Layout SideWidth="0" IsPage="true" ShowGotoTop="true" ShowCollapseBar="true"
             IsFullSide="@IsFullSide" IsFixedHeader="@IsFixedHeader" IsFixedFooter="@IsFixedFooter" ShowFooter="@ShowFooter"
             TabDefaultUrl="/"
-            Menus="@Menus" UseTabSet="@UseTabSet" AdditionalAssemblies="new[] { GetType().Assembly }" class="@Theme">
+            Menus="@Menus" UseTabSet="@UseTabSet" AdditionalAssemblies="new[] { GetType().Assembly, typeof(Client._Imports).Assembly }" class="@Theme">
         <Header>
             <span class="ms-3 flex-sm-fill d-none d-sm-block">Bootstrap of Blazor</span>
             <div class="flex-fill d-sm-none">
