@@ -117,10 +117,6 @@
     color: #c0c4cc;
 }
 
-.table-demo {
-    height: calc(100% - 56px);
-}
-
 .table-users-demo {
     height: calc(100vh - 162px);
 }
@@ -138,4 +134,11 @@
     --bb-menu-bar-bg: #702cf8;
     --bb-menu-item-hover-bg: #702cf8;
     --bb-menu-item-hover-color: #fff;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    .scroll {
+        scrollbar-color: rgba(0,0,0,0.3) rgba(0,0,0,0);
+        scrollbar-width: thin;
+    }
 }
