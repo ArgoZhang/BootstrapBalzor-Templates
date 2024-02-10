@@ -1,12 +1,10 @@
 ﻿using BootstrapBlazor.Components;
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 
 namespace BootstrapBlazorApp.Components.Layout;
 
-/// <summary>
-/// 
-/// </summary>
-public sealed partial class MainLayout
+public partial class Main
 {
     private bool UseTabSet { get; set; } = true;
 
@@ -23,6 +21,12 @@ public sealed partial class MainLayout
     private bool ShowFooter { get; set; } = true;
 
     private List<MenuItem>? Menus { get; set; }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
 
     /// <summary>
     /// OnInitialized 方法
