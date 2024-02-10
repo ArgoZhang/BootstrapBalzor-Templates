@@ -34,57 +34,23 @@ public partial class Users
     };
 
     [NotNull]
-    private IEnumerable<Foo>? Items { get; set; }
-
-    private static readonly ConcurrentDictionary<Type, Func<IEnumerable<Foo>, string, SortOrder, IEnumerable<Foo>>> SortLambdaCache = new();
+    private List<Foo>? Items { get; set; }
 
     private Task<QueryData<Foo>> OnQueryAsync(QueryPageOptions options)
     {
         // 此处代码实战中不可用，仅仅为演示而写防止数据全部被删除
-        if (Items == null || !Items.Any())
+        if (Items == null || Items.Count == 0)
         {
-            Items = Foo.GenerateFoo(Localizer, 23).ToList();
+            Items = Foo.GenerateFoo(Localizer, 23);
         }
 
-        var items = Items;
-        var isSearched = false;
-        // 处理高级查询
-        if (options.SearchModel is Foo model)
-        {
-            if (!string.IsNullOrEmpty(model.Name))
-            {
-                items = items.Where(item => item.Name?.Contains(model.Name, StringComparison.OrdinalIgnoreCase) ?? false);
-            }
-
-            if (!string.IsNullOrEmpty(model.Address))
-            {
-                items = items.Where(item => item.Address?.Contains(model.Address, StringComparison.OrdinalIgnoreCase) ?? false);
-            }
-
-            isSearched = !string.IsNullOrEmpty(model.Name) || !string.IsNullOrEmpty(model.Address);
-        }
-
-        if (options.Searches.Any())
-        {
-            // 针对 SearchText 进行模糊查询
-            items = items.Where(options.Searches.GetFilterFunc<Foo>(FilterLogic.Or));
-        }
-
-        // 过滤
-        var isFiltered = false;
-        if (options.Filters.Count != 0)
-        {
-            items = items.Where(options.Filters.GetFilterFunc<Foo>());
-            isFiltered = true;
-        }
+        var items = Items.Where(options.ToFilterFunc<Foo>());
 
         // 排序
         var isSorted = false;
         if (!string.IsNullOrEmpty(options.SortName))
         {
-            // 外部未进行排序，内部自动进行排序处理
-            var invoker = SortLambdaCache.GetOrAdd(typeof(Foo), key => LambdaExtensions.GetSortLambda<Foo>().Compile());
-            items = invoker(items, options.SortName, options.SortOrder);
+            items = items.Sort(options.SortName, options.SortOrder);
             isSorted = true;
         }
 
@@ -94,9 +60,9 @@ public partial class Users
         {
             Items = items.Skip((options.PageIndex - 1) * options.PageItems).Take(options.PageItems).ToList(),
             TotalCount = total,
-            IsFiltered = isFiltered,
+            IsFiltered = true,
             IsSorted = isSorted,
-            IsSearch = isSearched
+            IsSearch = true
         });
     }
 }

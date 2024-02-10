@@ -1,5 +1,4 @@
 ﻿using BootstrapBlazorApp.WebAssembly;
-using BootstrapBlazorApp.WebAssembly.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
@@ -14,8 +13,5 @@ builder.Services.AddBootstrapBlazor(options =>
     options.IgnoreLocalizerMissing = true;
     options.DefaultCultureInfo = "zh-CN";
 });
-
-// 增加 Table 数据服务操作类
-builder.Services.AddTableDemoDataService();
 
 await builder.Build().RunAsync();
