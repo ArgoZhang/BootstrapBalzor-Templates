@@ -33,14 +33,14 @@ public partial class Users
     };
 
     [NotNull]
-    private IEnumerable<Foo>? Items { get; set; }
+    private List<Foo>? Items { get; set; }
 
     private Task<QueryData<Foo>> OnQueryAsync(QueryPageOptions options)
     {
         // 此处代码实战中不可用，仅仅为演示而写防止数据全部被删除
-        if (Items == null || !Items.Any())
+        if (Items == null || Items.Count == 0)
         {
-            Items = Foo.GenerateFoo(Localizer, 23).ToList();
+            Items = Foo.GenerateFoo(Localizer, 23);
         }
 
         var items = Items.Where(options.ToFilterFunc<Foo>());
