@@ -7,7 +7,8 @@
 
     <p>只读数据 - 更改每页显示数量体验固定表头功能</p>
 
-    <Table TItem="Foo" IsPagination="true" PageItemsSource="@PageItemsSource" RenderMode="TableRenderMode.Table" IsFixedHeader="true" class="table-users"
+    <Table TItem="Foo" RenderMode="TableRenderMode.Table" class="table-users"
+           IsPagination="true" PageItemsSource="@PageItemsSource" IsFixedHeader="true"
            IsStriped="true" IsBordered="true" OnQueryAsync="OnQueryAsync">
         <TableColumns>
             <TableColumn @bind-Field="@context.Name" Width="260">
@@ -26,9 +27,9 @@
                     </div>
                 </Template>
             </TableColumn>
-            <TableColumn @bind-Field="@context.Address" />
+            <TableColumn @bind-Field="@context.Address" Sortable="true" />
             <TableColumn @bind-Field="@context.Education" Align="Alignment.Center" Width="80" />
-            <TableColumn @bind-Field="@context.Count" Width="160">
+            <TableColumn @bind-Field="@context.Count" Sortable="true" Width="160">
                 <Template Context="value">
                     <div class="w-100">
                         <div>@value.Value %</div>

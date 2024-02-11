@@ -7,23 +7,6 @@ using System.Diagnostics.CodeAnalysis;
 namespace BootstrapBlazorApp.Server.Services;
 
 /// <summary>
-/// BootstrapBlazor 服务扩展类
-/// </summary>
-public static class TableDemoDataServiceCollectionExtensions
-{
-    /// <summary>
-    /// 增加 PetaPoco 数据库操作服务
-    /// </summary>
-    /// <param name="services"></param>
-    /// <returns></returns>
-    public static IServiceCollection AddTableDemoDataService(this IServiceCollection services)
-    {
-        services.AddScoped(typeof(IDataService<>), typeof(TableDemoDataService<>));
-        return services;
-    }
-}
-
-/// <summary>
 /// 演示网站示例数据注入服务实现类
 /// </summary>
 internal class TableDemoDataService<TModel>(IStringLocalizer<Foo> localizer) : DataServiceBase<TModel> where TModel : class, new()

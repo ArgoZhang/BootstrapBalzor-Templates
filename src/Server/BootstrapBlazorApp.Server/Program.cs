@@ -1,6 +1,4 @@
 ﻿using BootstrapBlazorApp.Server.Components;
-using BootstrapBlazorApp.Server.Data;
-using BootstrapBlazorApp.Server.Services;
 using Microsoft.AspNetCore.SignalR;
 using System.Text;
 
@@ -12,11 +10,6 @@ Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 
 builder.Services.AddBootstrapBlazor();
-
-builder.Services.AddSingleton<WeatherForecastService>();
-
-// 增加 Table 数据服务操作类
-builder.Services.AddTableDemoDataService();
 
 // 增加 SignalR 服务数据传输大小限制配置
 builder.Services.Configure<HubOptions>(option => option.MaximumReceiveMessageSize = null);
