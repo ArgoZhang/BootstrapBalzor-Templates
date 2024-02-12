@@ -10,6 +10,10 @@
     --bb-layout-title-color: var(--bb-header-color);
 }
 
+    .layout:not(.has-footer) {
+        --bb-layout-footer-height: 0px;
+    }
+
 .layout-header {
     border-bottom: 1px solid var(--bs-border-color);
 }
@@ -115,10 +119,6 @@
     margin-top: .25rem;
     font-size: 86%;
     color: #c0c4cc;
-}
-
-.table-users-demo {
-    height: calc(100vh - 162px);
 }
 
 .table-users {
