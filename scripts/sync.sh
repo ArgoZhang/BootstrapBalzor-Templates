@@ -35,7 +35,7 @@ rm -rf $sourceDir/WebAssembly/BootstrapBlazorApp.WebAssembly/obj
 
 \cp -rf $sourceDir/Auto/BootstrapBlazorApp/ $targetDir/auto/BootstrapBlazorApp/
 \cp -rf $sourceDir/Auto/BootstrapBlazorApp.Client/ $targetDir/auto/BootstrapBlazorApp.Client/
-\cp $sourceDir/.editorconfig $targetDir/auto
+\cp $sourceDir/.editorconfig $targetDir/auto/
 
 \cp -rf $sourceDir/Server/BootstrapBlazorApp.Server/ $targetDir/server/BootstrapBlazorApp.Server/
 \cp $sourceDir/.editorconfig $targetDir/server/
