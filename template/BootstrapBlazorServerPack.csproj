@@ -41,7 +41,7 @@
     <None Include="logo.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
-  <Target Name="PreBuild" AfterTargets="PreBuildEvent">
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
     <Message Text="Run command: $(MSBuildThisFileDirectory)" Importance="high" />
     <Exec Command="$(SyncCmd) $(MSBuildThisFileDirectory)" />
   </Target>
