@@ -1,0 +1,20 @@
+﻿@rendermode InteractiveServer
+
+<a title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="@_tooltipText" class="@CollapseBarClassString" @onclick="CollapseMenu">
+    <i class="fa-solid fa-bars"></i>
+</a>
+
+@code {
+    private string _tooltipText = "展开/收起菜单";
+
+    private string? CollapseBarClassString => CssBuilder.Default("layout-header-bar")
+        .AddClass("is-collapsed", _isCollapsed)
+        .Build();
+
+    private bool _isCollapsed;
+
+    private void CollapseMenu()
+    {
+        _isCollapsed = !_isCollapsed;
+    }
+}

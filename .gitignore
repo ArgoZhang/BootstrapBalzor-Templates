@@ -359,6 +359,9 @@ tools/
 template/auto/**/*
 !template/auto/.template.config/*
 
+template/auto-per/**/*
+!template/auto-per/.template.config/*
+
 template/server/**/*
 !template/server/.template.config/*
 

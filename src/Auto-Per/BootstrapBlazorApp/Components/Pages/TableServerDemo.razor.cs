@@ -5,12 +5,12 @@ using Microsoft.Extensions.Localization;
 using System.Collections.Concurrent;
 using System.Diagnostics.CodeAnalysis;
 
-namespace BootstrapBlazorApp.Client.Pages;
+namespace BootstrapBlazorApp.Components.Pages;
 
 /// <summary>
 /// 
 /// </summary>
-public partial class TableDemo
+public partial class TableServerDemo
 {
     [Inject]
     [NotNull]
