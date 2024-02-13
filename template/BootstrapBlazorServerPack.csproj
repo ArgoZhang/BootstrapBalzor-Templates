@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <Content Include="auto\**\*" Exclude="auto\**\obj\**\*;auto\**\bin\**\*;auto\**\.vs\**\*" />
+    <Content Include="auto-per\**\*" Exclude="auto-per\**\obj\**\*;auto-per\**\bin\**\*;auto-per\**\.vs\**\*" />
     <Content Include="server\**\*" Exclude="server\**\obj\**\*;server\**\bin\**\*;server\**\.vs\**\*" />
     <Content Include="webassembly\**\*" Exclude="webassembly\**\obj\**\*;webassembly\**\bin\**\*;webassembly\**\.vs\**\*" />
     <Compile Remove="**\*" />
