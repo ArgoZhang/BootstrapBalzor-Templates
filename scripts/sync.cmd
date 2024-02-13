@@ -11,6 +11,8 @@ echo "Ready to copy files to dist
 
 rd /Q /S %targetDir%auto\BootstrapBlazorApp
 rd /Q /S %targetDir%auto\BootstrapBlazorApp.Client
+rd /Q /S %targetDir%auto-per\BootstrapBlazorApp
+rd /Q /S %targetDir%auto-per\BootstrapBlazorApp.Client
 rd /Q /S %targetDir%server\BootstrapBlazorApp.Server
 rd /Q /S %targetDir%webassembly\BootstrapBlazorApp.WebAssembly
 
@@ -18,6 +20,10 @@ rd /Q /S %sourceDir%\Auto\BootstrapBlazorApp\bin
 rd /Q /S %sourceDir%\Auto\BootstrapBlazorApp\obj
 rd /Q /S %sourceDir%\Auto\BootstrapBlazorApp.Client\bin
 rd /Q /S %sourceDir%\Auto\BootstrapBlazorApp.Client\obj
+rd /Q /S %sourceDir%\Auto-Per\BootstrapBlazorApp\bin
+rd /Q /S %sourceDir%\Auto-Per\BootstrapBlazorApp\obj
+rd /Q /S %sourceDir%\Auto-Per\BootstrapBlazorApp.Client\bin
+rd /Q /S %sourceDir%\Auto-Per\BootstrapBlazorApp.Client\obj
 
 rd /Q /S %sourceDir%\Server\BootstrapBlazorApp.Server\bin
 rd /Q /S %sourceDir%\Server\BootstrapBlazorApp.Server\obj
@@ -27,6 +33,9 @@ rd /Q /S %sourceDir%\WebAssembly\BootstrapBlazorApp.WebAssembly\obj
 
 xcopy %sourceDir%\Auto\*.* %targetDir%auto /S /R /Y
 xcopy %sourceDir%\.editorconfig %targetDir%auto /Y
+
+xcopy %sourceDir%\Auto-Per\*.* %targetDir%auto-per /S /R /Y
+xcopy %sourceDir%\.editorconfig %targetDir%auto-per /Y
 
 xcopy %sourceDir%\Server\*.* %targetDir%server /S /R /Y
 xcopy %sourceDir%\.editorconfig %targetDir%server /Y
