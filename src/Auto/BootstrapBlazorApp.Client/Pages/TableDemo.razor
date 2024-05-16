@@ -1,14 +1,16 @@
 ﻿@page "/table"
+@rendermode InteractiveAuto
 @attribute [TabItemOption(Text = "Table")]
+<BootstrapBlazorRoot>
+    <PageTitle>Table</PageTitle>
 
-<PageTitle>Table</PageTitle>
-
-<Table TItem="Foo" AutoGenerateColumns="true" class="table-demo"
-        IsPagination="true" PageItemsSource="PageItemsSource" RenderMode="TableRenderMode.Table"
-        IsStriped="true" IsBordered="true" IsMultipleSelect="true"
-        ShowSkeleton="true" ShowToolbar="true" ShowSearch="true" ShowExtendButtons="true"
-        OnQueryAsync="OnQueryAsync" OnSaveAsync="OnSaveAsync" OnDeleteAsync="OnDeleteAsync">
-    <TableColumns>
-        <TableColumn @bind-Field="@context.Hobby" Items="GetHobbys(context)" />
-    </TableColumns>
-</Table>
+    <Table TItem="Foo" AutoGenerateColumns="true" class="table-demo"
+           IsPagination="true" PageItemsSource="PageItemsSource" RenderMode="TableRenderMode.Table"
+           IsStriped="true" IsBordered="true" IsMultipleSelect="true"
+           ShowSkeleton="true" ShowToolbar="true" ShowSearch="true" ShowExtendButtons="true"
+           OnQueryAsync="OnQueryAsync" OnSaveAsync="OnSaveAsync" OnDeleteAsync="OnDeleteAsync">
+        <TableColumns>
+            <TableColumn @bind-Field="@context.Hobby" Items="GetHobbys(context)" />
+        </TableColumns>
+    </Table>
+</BootstrapBlazorRoot>
