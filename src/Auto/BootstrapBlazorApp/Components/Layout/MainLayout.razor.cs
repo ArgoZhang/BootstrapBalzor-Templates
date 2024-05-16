@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Routing;
 
-namespace BootstrapBlazorApp.Client.Layout;
+namespace BootstrapBlazorApp.Components.Layout;
 
 public partial class MainLayout
 {
