@@ -20,7 +20,7 @@
     <PackageReference Include="BootstrapBlazor" Version="8.*" />
     <PackageReference Include="BootstrapBlazor.FontAwesome" Version="8.*" />
     <PackageReference Include="BootstrapBlazor.Html2Pdf" Version="8.1.1" />
-    <PackageReference Include="BootstrapBlazor.TableExport" Version="8.1.0-beta02" />
+    <PackageReference Include="BootstrapBlazor.TableExport" Version="8.1.0" />
   </ItemGroup>
 
 </Project>
