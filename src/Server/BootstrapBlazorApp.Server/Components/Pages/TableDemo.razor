@@ -7,6 +7,7 @@
        IsPagination="true" PageItemsSource="PageItemsSource"
        IsStriped="true" IsBordered="true"IsMultipleSelect="true"
        ShowSkeleton="true" ShowToolbar="true" ShowSearch="true" ShowExtendButtons="true"
+       ShowExportButton="true" ShowExportPdfButton="true"
        OnQueryAsync="OnQueryAsync" OnSaveAsync="OnSaveAsync" OnDeleteAsync="OnDeleteAsync">
     <TableColumns>
         <TableColumn @bind-Field="@context.Hobby" Items="GetHobbys(context)" />
